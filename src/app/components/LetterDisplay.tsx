@@ -8,9 +8,9 @@ export function LetterDisplay({ word }: {word: string}) {
   return (
     <>
         {word.split('').map((char, i) => (
-            <div 
+            <div suppressHydrationWarning
                 key={i}
-                className="letter text-6xl font-semibold xs:text-[90px] md:text-[120px]"
+                className=""
                 data-speed={getRandomSpeed()}
             >
                 {char}
