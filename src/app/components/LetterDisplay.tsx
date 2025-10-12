@@ -10,7 +10,7 @@ export function LetterDisplay({ word }: {word: string}) {
         {word.split('').map((char, i) => (
             <div suppressHydrationWarning
                 key={i}
-                className=""
+                className="letter"
                 data-speed={getRandomSpeed()}
             >
                 {char}
