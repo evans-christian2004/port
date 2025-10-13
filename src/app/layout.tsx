@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import "./globals.css";
+import TopNav from "./components/TopNav";
+
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -22,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${lexend.variable} ${lexend.variable} antialiased`}
       >
+        <TopNav/>
         {children}
       </body>
     </html>
