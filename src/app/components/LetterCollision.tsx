@@ -3,6 +3,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 import { LetterDisplay } from './LetterDisplay';
+import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,7 +42,7 @@ function animateLettersOnScroll(ref: React.RefObject<HTMLDivElement>){
                 trigger: document.documentElement,
                 start: 0,
                 end: window.innerHeight,
-                scrub: 0.5,
+                scrub: .5,
                 invalidateOnRefresh: true
             }
         });
@@ -64,10 +65,10 @@ export function LetterCollision() {
     return (
       <div ref={ref} className="ml-8 xs:ml-8 sm:ml-12 md:ml-18 xl:ml-24  scroll-smooth select-none">
         {/* layout for two lines + sub-sentence */}
-        <div className="-mt-48 mb-36 flex h-screen flex-col justify-end lg:mb-24">
+        <div className="-mt-36 mb-36 flex h-screen flex-col justify-end lg:mb-24">
           <div className="letter flex text-7xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] ">
             <LetterDisplay word={lines[0]} />
-            <div className="w-4 sm:w-5" />
+            <div className="w-4 sm:w-8" />
             <LetterDisplay word={lines[1]} />
           </div>
           <div className="flex flex-wrap text-7xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] text-primay-500 text-primary-500">
@@ -83,7 +84,9 @@ export function LetterCollision() {
               </div>
             ))}
           </div>
+          <Image className='ml-[calc(35vw)] sm:ml-[calc(40vw)] flex animate-bounce letter mt-12' alt="down arrow" src="/Down-Arrow.svg" width={50} height={50}/>
         </div>
+        {/* I may keep this extra text section or I may not. removing it makes snapping sections easier */}
         <div className="flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px]">
           <LetterDisplay word={lines[3]} />
         </div>

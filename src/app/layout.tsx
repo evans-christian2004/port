@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import "./globals.css";
 import TopNav from "./components/TopNav";
+import Footer from "./components/Footer";
 
 
 const lexend = Lexend({
@@ -20,12 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <body
         className={`${lexend.variable} ${lexend.variable} antialiased`}
       >
         <TopNav/>
         {children}
+        <Footer/>
       </body>
     </html>
   );

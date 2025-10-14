@@ -9,7 +9,7 @@ const TopNav = () => {
 
   
   return (
-    <nav className='p-4 top-0 sticky flex items-center z-50 justify-around'>
+    <nav className='p-4 top-0 sticky flex justify-between items-center z-50 container mx-auto'>
       <Link href="/">
         <Image
           className='logo-shake transition-all ease-in-out'

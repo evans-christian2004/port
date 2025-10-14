@@ -5,7 +5,9 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-primary-500: #00F3AB;
+  --color-primary-400: #00c29e;
   --color-secondary-500: #245C69;
+  --color-secondary-600: #3CB4A6;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -35,3 +37,6 @@ body {
   font-family: "Lexend";
 }
 
+.svg-hover:hover svg{
+  fill: #ffffff;
+}
