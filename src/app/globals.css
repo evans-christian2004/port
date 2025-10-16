@@ -37,6 +37,27 @@ body {
   font-family: "Lexend";
 }
 
-.svg-hover:hover svg{
-  fill: #ffffff;
-}
+
+/* .burger{
+
+    width: 100%;
+
+    &::after, &::before{
+
+        content: "";
+
+        display: block;
+
+        height: 1px;
+
+        width: 40%;
+
+        margin: auto;
+
+        background-color: white;
+
+        position: relative;
+
+        transition: transform 0.3s;
+
+} */

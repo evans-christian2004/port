@@ -7,7 +7,6 @@ export default function Home() {
     <main className="overflow-hidden">
       <section className="">
         <LetterCollision/>
-        
       </section>
       <section className="min-h-screen bg-[#073a4b]">
         <div className="container mx-auto pt-24">
@@ -25,13 +24,13 @@ export default function Home() {
                 For UCF's largest IT zone. I provide support for over 500 students, faculty, and staff.
               </p>
               <p className="pt-6">
-                Previously, I worked at The Startup Life, an LLC based in Miami with the goal of growing the digital brand of different small organizations
+                Previously, I worked at <Link href="https://thestartuplife.io/" className="text-primary-500 underline">The Startup Life</Link>, an LLC based in Miami with the goal of growing the digital brand of different small organizations
                 and companies. While working there I developed and deployed the primary landing pages for budding startups and the comany itself. It was a small team, where 
                 I often had the pleasure of taking a leadership role in decision making and design decisions.
               </p>
             </div>
             <div className="">
-              <Image className="rounded-4xl p-4" src="/me.webp" alt="a picture of me" width={3000} height={4000}/>
+              <Image className="rounded-4xl p-4" src="/images/me.webp" alt="a picture of me" width={3000} height={4000}/>
             </div>
 
           </div>

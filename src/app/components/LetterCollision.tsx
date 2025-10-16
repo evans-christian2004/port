@@ -84,7 +84,7 @@ export function LetterCollision() {
               </div>
             ))}
           </div>
-          <Image className='ml-[calc(35vw)] sm:ml-[calc(40vw)] flex animate-bounce letter mt-12' alt="down arrow" src="/Down-Arrow.svg" width={50} height={50}/>
+          <Image className='ml-[calc(35vw)] sm:ml-[calc(40vw)] flex animate-bounce letter mt-12' alt="down arrow" src="/icons/Down-Arrow.svg" width={50} height={50}/>
         </div>
         {/* I may keep this extra text section or I may not. removing it makes snapping sections easier */}
         <div className="flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px]">
