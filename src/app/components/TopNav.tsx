@@ -46,7 +46,6 @@ const TopNav = () => {
         />
       </Link>
       {/*nav links*/}
-      
       <div className="z-20 bg-secondary-500 px-10 py-4 rounded-full transition-all ease-in-out">
         {!scrolled && screenWidth > 600 ? (
           <div className="flex gap-5 items-center">
