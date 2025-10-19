@@ -7,7 +7,7 @@ const Cursor: React.FC = () => {
 
   const moveCursor = (e: MouseEvent) => {
     gsap.to(cursor.current, {
-      x: e.clientX - 18,
+      x: e.clientX - 16,
       y: e.clientY - 18,
       duration: 0.15,
       ease: "power2.out",
@@ -59,7 +59,7 @@ const Cursor: React.FC = () => {
   return (
     <div
       ref={cursor}
-      className="w-8 h-8 hidden md:block fixed z-50 rounded-full pointer-events-none bg-white mix-blend-difference "
+      className="w-9 h-9  hidden md:block fixed z-50 rounded-full pointer-events-none bg-white mix-blend-difference "
     />
   );
 };

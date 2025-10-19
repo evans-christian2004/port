@@ -9,7 +9,7 @@ import { easeInOut, motion } from "motion/react"
 const iconSize : number = 120;
 
 const variants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: -50 },
     visible: {
         opacity: 1,
         y: 0,
@@ -21,7 +21,7 @@ const variants = {
     }
 }
 const childVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: -30 },
     visible: {
         opacity: 1,
         y: 0,
@@ -53,7 +53,7 @@ const SkillsSection = () => {
                         >
                             <Link href={skill.url}>
                                 <Image className='bg-white p-2 rounded-3xl' src={skill.iconSrc} height={iconSize} width={iconSize} alt={`${skill.name} icon`}/>
-                                <h3 className='text-center'>{skill.name}</h3>
+                                <h3 className='text-center min-h-15 flex items-center justify-center'>{skill.name}</h3>
                             </Link>
                         </motion.li>
                     ))}
