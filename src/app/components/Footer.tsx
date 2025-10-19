@@ -7,13 +7,15 @@ const Footer = () => {
     <div className="bg-primary-500 text-background md:h-36 h-60">
         <div className='flex md:flex-row flex-col gap-5 justify-around items-center pt-6 pb-6'>
             <div className="px-12">
-              <Image 
-                className='logo-shake transition-all ease-in-out'
-                src="/icons/Logo-dark.svg"
-                width={50}
-                height={50}
-                alt='logo'
-              />
+              <Link href="/">
+                <Image
+                  className='logo-shake transition-all ease-in-out'
+                  src="/icons/Logo-dark.svg"
+                  width={50}
+                  height={50}
+                  alt='logo'
+                />
+              </Link>
             </div>
             <div className="">
                 Made with <Image className='inline' src="/icons/heart.svg" width={32} height={32} alt="love"/> by Chris

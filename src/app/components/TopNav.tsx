@@ -28,7 +28,6 @@ const TopNav = () => {
     handleResize();
     
     window.addEventListener('resize', handleResize);
-    console.log(screenWidth)
 
     return () => window.removeEventListener('resize', handleResize);
   }, [screenWidth]);
