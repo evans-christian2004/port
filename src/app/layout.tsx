@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import "./globals.css";
 import TopNav from "./components/TopNav";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
 
 
 const lexend = Lexend({
@@ -22,13 +23,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="">
-      <body
-        className={`${lexend.variable} ${lexend.variable} antialiased`}
-      >
-        <TopNav/>
-        {children}
-        <Footer/>
-      </body>
+      <>
+        <body
+          className={`${lexend.variable} ${lexend.variable} antialiased`}
+        >
+          <Cursor/>
+          <TopNav/>
+          {children}
+          <Footer/>
+        </body>
+      </>
+      
     </html>
   );
 }

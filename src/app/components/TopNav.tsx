@@ -50,9 +50,9 @@ const TopNav = () => {
         {!scrolled && screenWidth > 600 ? (
           <div className="flex gap-5 items-center">
             <div className="flex gap-2">
-              <Link className='bg-primary-500 hover:bg-primary-400 transition-all ease-in-out duration-300 rounded-full p-2' href="https://github.com/evans-christian2004"><Image className='' src="/icons/github-dark.svg" width={25} height={25} alt='github'/></Link>
-              <Link className='bg-primary-500 hover:bg-primary-400 transition-all ease-in-out duration-300 rounded-full p-2' href="https://www.linkedin.com/in/evanschristian/"><Image src="/icons/linkedin-dark.svg" width={25} height={25} alt='github'/></Link>
-              <Link className='bg-primary-500 hover:bg-primary-400 transition-all ease-in-out duration-300 rounded-full p-2' href="/CSResume.pdf"><Image src="/icons/resume-dark.svg" width={25} height={35} alt='github'/></Link>
+              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2' href="https://github.com/evans-christian2004"><Image className='' src="/icons/github-dark.svg" width={25} height={25} alt='github'/></Link>
+              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2' href="https://www.linkedin.com/in/evanschristian/"><Image src="/icons/linkedin-dark.svg" width={25} height={25} alt='github'/></Link>
+              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2' href="/CSResume.pdf"><Image src="/icons/resume-dark.svg" width={25} height={35} alt='github'/></Link>
         </div>
         <Link 
           href="/experience"className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${pathname == "/experience" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
@@ -72,11 +72,11 @@ const TopNav = () => {
           </div>
           
         ) : (
-          <div className="h-8">
+          <div className="h-10">
             <button onClick={() => {
               setOpen(!open);
             }} className='absolute top-8 right-10 z-20 p-0 m-0 hover:cursor-pointer'>
-              <Image src={`/icons/${open ? "x.svg" : "menu.svg"}`} height={37} width={37} alt='menu icon'/>
+              <Image src={`/icons/${open ? "x.svg" : "menu.svg"}`} height={40} width={40} alt='menu icon'/>
             </button>
               <div className={`${open ? "right-0" : "-right-20"}`}>
                 <SideNav isOpen={open}/>

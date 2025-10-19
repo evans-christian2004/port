@@ -129,6 +129,22 @@ export const skills: SkillCategory[] = [
                 name: "Google Gemini API",
                 iconSrc: "/icons/skill-icons/gemini.svg",
                 url: "https://ai.google.dev/docs",
+            },
+            {
+                name: "GSAP",
+                iconSrc: "/icons/skill-icons/gsap.svg",
+                url: "https://gsap.com/"
+            },
+            {
+                name: "Motion.",
+                iconSrc: "/icons/skill-icons/motion.svg",
+                url: "https://motion.dev/"
+
+            },
+            {
+                name: "EllevenLabs",
+                iconSrc: "/icons/skill-icons/ellevenlabs.svg",
+                url: ""
             }
         ],
     },
@@ -137,12 +153,12 @@ export const skills: SkillCategory[] = [
         skills: [
             {
                 name: "CodePath TIP 102",
-                iconSrc: "",
+                iconSrc: "/icons/skill-icons/codepath.svg",
                 url: "https://www.codepath.org/courses/tech-interview-prep",
             },
             {
                 name: "CompTIA IT Fundamentals Pro",
-                iconSrc: "",
+                iconSrc: "/icons/skill-icons/ITFpro.svg",
                 url: "https://www.comptia.org/certifications/itf",
             },
         ],

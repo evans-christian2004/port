@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import { useScroll, useTransform, motion } from 'framer-motion';
 
 const Footer = () => {
   return (
@@ -19,9 +19,9 @@ const Footer = () => {
                 Made with <Image className='inline' src="/icons/heart.svg" width={32} height={32} alt="love"/> by Chris
             </div>
             <div className="flex gap-1">
-                <Link className='bg-primary-400 hover:bg-primary-500 transition-all ease-in-out rounded-full p-2' href="https://github.com/evans-christian2004"><Image className='' src="/icons/github-dark.svg" width={35} height={35} alt='github'/></Link>
-                <Link className='bg-primary-400 hover:bg-primary-500 transition-all ease-in-out rounded-full p-2' href="https://www.linkedin.com/in/evanschristian/"><Image src="/icons/linkedin-dark.svg" width={35} height={35} alt='github'/></Link>
-                <Link className='bg-primary-400 hover:bg-primary-500 transition-all ease-in-out rounded-full p-2' href="/CSResume.pdf"><Image src="/icons/resume-dark.svg" width={35} height={35} alt='github'/></Link>
+                <Link className='bg-white hover:bg-primary-500 transition-all ease-in-out rounded-full p-2' href="https://github.com/evans-christian2004"><Image className='' src="/icons/github-dark.svg" width={35} height={35} alt='github'/></Link>
+                <Link className='bg-white hover:bg-primary-500 transition-all ease-in-out rounded-full p-2' href="https://www.linkedin.com/in/evanschristian/"><Image src="/icons/linkedin-dark.svg" width={35} height={35} alt='github'/></Link>
+                <Link className='bg-white hover:bg-primary-500 transition-all ease-in-out rounded-full p-2' href="/CSResume.pdf"><Image src="/icons/resume-dark.svg" width={35} height={35} alt='github'/></Link>
             </div>
             
         </div>

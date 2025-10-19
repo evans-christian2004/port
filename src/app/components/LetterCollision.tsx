@@ -34,7 +34,7 @@ function animateLettersOnScroll(ref: React.RefObject<HTMLDivElement>){
       console.log()
         const speed = parseFloat(letter.dataset.speed || '1');
         gsap.to(letter, {
-            y: (1 - speed) * ScrollTrigger.maxScroll(window),
+            y: (.90 - speed) * ScrollTrigger.maxScroll(window),
             rotation: getRandomRotation(),
             ease: 'power2.out',
             duration: 0.8,
@@ -65,8 +65,8 @@ export function LetterCollision() {
     return (
       <div ref={ref} className="ml-8 xs:ml-8 sm:ml-12 md:ml-18 xl:ml-24  scroll-smooth select-none">
         {/* layout for two lines + sub-sentence */}
-        <div className="-mt-36 mb-36 flex h-screen flex-col justify-end lg:mb-24">
-          <div className="letter flex text-7xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] ">
+        <div className="-mt-36 mb-24 flex h-screen flex-col justify-end lg:mb-24">
+          <div className="flex text-7xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] ">
             <LetterDisplay word={lines[0]} />
             <div className="w-4 sm:w-8" />
             <LetterDisplay word={lines[1]} />
