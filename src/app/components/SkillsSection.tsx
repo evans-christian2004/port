@@ -34,7 +34,7 @@ const childVariants = {
 const SkillsSection = () => {
 
   return (
-    <div className='container mx-auto p-10 min-h-screen'>
+    <div className='container mx-auto px-10 py-16 min-h-screen'>
         <h1 className='text-5xl xl:text-8xl font-semibold'>Skills:</h1>
         {skills.map((category) => (
             <div key={category.category}>

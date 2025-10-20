@@ -50,7 +50,7 @@ function animateLettersOnScroll(ref: React.RefObject<HTMLDivElement>){
 }
 
 
-export function LetterCollision() {
+export function Hero() {
     const ref = useRef<HTMLDivElement>(null);
     useEffect(() => {
       if (!ref.current) return;
@@ -86,7 +86,7 @@ export function LetterCollision() {
           </div>
           <Image className='ml-[calc(35vw)] sm:ml-[calc(40vw)] flex animate-bounce letter mt-12' alt="down arrow" src="/icons/arrow.svg" width={50} height={50}/>
         </div>
-        {/* I may keep this extra text section or I may not. removing it makes snapping sections easier */}
+        {/* I may keep this extra text section or I may not. removing it makes snapping sections easier but the extra letters are cool */}
         <div className="mb-25 flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px]">
           <LetterDisplay word={lines[3]} />
         </div>

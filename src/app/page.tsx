@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { LetterCollision } from "./components/LetterCollision";
+import { Hero } from "./components/Hero";
 import Link from "next/link";
 import SkillsSection from "./components/SkillsSection";
 import IMakeThings from "./components/IMakeThings";
@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden">
       <section className="">
-        <LetterCollision/>
+        <Hero/>
       </section>
       <section className="min-h-fit bg-[#073a4b] rounded-t-full">
         <div className="container mx-auto py-24">
@@ -40,7 +40,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section>
+      <section className="bg-[#073a4b] rounded-b-[20rem] pb-24" >
         <IMakeThings/>
         <CommunitySection/>
       </section>

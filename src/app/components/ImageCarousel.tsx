@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react";
+import Image from "next/image";
 
 const images = [
   "/images/heroImgs/shell25group.jpg",
@@ -33,7 +34,7 @@ export default function ImageCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="embla relative max-w-4xl">
+    <div className="embla relative max-w-4xl min-w-xl">
       {/* Viewport */}
       <div className="embla__viewport overflow-hidden rounded-xl" ref={emblaRef}>
         <div className="embla__container flex">
@@ -55,15 +56,15 @@ export default function ImageCarousel() {
       {/* Prev/Next Buttons */}
       <button
         onClick={scrollPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-secondary-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition"
       >
-        ←
+        <Image src="/icons/arrow.svg" className="rotate-90" height={25} width={25} alt="right-arrow"/>
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition"
       >
-        →
+        <Image src="/icons/arrow.svg" className="-rotate-90" height={25} width={25} alt="right-arrow"/>
       </button>
 
       {/* Progress Dots */}
@@ -74,8 +75,8 @@ export default function ImageCarousel() {
             onClick={() => emblaApi?.scrollTo(index)}
             className={`w-3 h-3 rounded-full transition ${
               index === selectedIndex
-                ? "bg-primary-500 scale-110"
-                : "bg-gray-400 hover:bg-gray-500"
+                ? "bg-primary-500"
+                : "bg-white hover:bg-gray-500"
             }`}
           />
         ))}
