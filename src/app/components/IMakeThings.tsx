@@ -10,7 +10,7 @@ export default function ScrollHeader() {
   const x = useTransform(scrollYProgress, [0, 2], ["0%", "-50%"]);
 
   return (
-    <section className="relative bg-primary-500 text-background flex items-center justify-center overflow-hidden">
+    <div className="relative bg-primary-500 text-background flex items-center justify-center overflow-hidden select-none">
       <motion.h1
         style={{ x }}
         className="text-6xl font-bold whitespace-nowrap"
@@ -22,6 +22,6 @@ export default function ScrollHeader() {
             </span>
         ))}
       </motion.h1>
-    </section>
+    </div>
   );
 }

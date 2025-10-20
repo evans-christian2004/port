@@ -37,27 +37,13 @@ body {
   font-family: "Lexend";
 }
 
-
-/* .burger{
-
-    width: 100%;
-
-    &::after, &::before{
-
-        content: "";
-
-        display: block;
-
-        height: 1px;
-
-        width: 40%;
-
-        margin: auto;
-
-        background-color: white;
-
-        position: relative;
-
-        transition: transform 0.3s;
-
-} */
+.embla {
+  overflow: hidden;
+}
+.embla__container {
+  display: flex;
+}
+.embla__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}

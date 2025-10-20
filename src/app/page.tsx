@@ -3,6 +3,7 @@ import { LetterCollision } from "./components/LetterCollision";
 import Link from "next/link";
 import SkillsSection from "./components/SkillsSection";
 import IMakeThings from "./components/IMakeThings";
+import CommunitySection from "./components/CommunitySection";
 
 export default function Home() {
   return (
@@ -10,14 +11,14 @@ export default function Home() {
       <section className="">
         <LetterCollision/>
       </section>
-      <section className="min-h-fit bg-[#073a4b] rounded-t-[30rem]">
+      <section className="min-h-fit bg-[#073a4b] rounded-t-full">
         <div className="container mx-auto py-24">
           <div className="display flex lg:flex-row flex-col-reverse items-center">
             <div className="p-12 text-xl">
               <h1 className="text-5xl xl:text-8xl mb-12 font-semibold">Who is this guy?</h1>
               <p className="text-sm sm:text-xl">
                 Hello and welcome! My name is Christian Evans, and I'm an Information Technology Student at the <Link href="https://www.ucf.edu/" className="text-primary-500 underline">
-                University of Central Florida</Link>. I am a software engineer and IT technician with a passion for learning and growing my skills in thriving communities
+                University of Central Florida</Link>. I am a software engineer and IT technician with a passion for learning and growing my skills in thriving communities.
                 I currently am an active memeber of <Link href="https://club.knighthacks.org/" className="text-primary-500 underline">Knight Hacks</Link>, the primary software engineering 
                 student organization at UCF, as well as <Link href="https://www.colorstack.org/" className="text-primary-500 underline">Color Stack </Link> 
                 and <Link href="https://www.nsbeucf.org/" className="text-primary-500 underline">NSBE</Link> &#40;National Society of Black Engineers&#41;.
@@ -34,13 +35,14 @@ export default function Home() {
               </p>
             </div>
             <div className="">
-              <Image className="sm:rounded-[20rem] rounded-[10rem]  p-4" src="/images/me.webp" alt="a picture of me" width={2400} height={3200}/>
+              <Image className="sm:rounded-[20rem] rounded-[10rem]  p-4" src="/images/heroimgs/me.jpg" alt="a picture of me" width={2400} height={3200}/>
             </div>
           </div>
         </div>
       </section>
       <section>
         <IMakeThings/>
+        <CommunitySection/>
       </section>
       <section>
         <SkillsSection/>
