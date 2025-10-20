@@ -40,12 +40,12 @@ export default function ImageCarousel() {
           {images.map((src, index) => (
             <div
               key={index}
-              className="embla__slide flex-[0_0_100%] flex items-center justify-center bg-gray-200"
+              className="embla__slide flex w-40 items-center justify-center"
             >
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="object-cover w-full h-full rounded-xl"
+                className="object-cover w-[500px] h-[350px] rounded-4xl"
               />
             </div>
           ))}

@@ -13,7 +13,7 @@ export default function Home() {
       </section>
       <section className="min-h-fit bg-[#073a4b] rounded-t-full">
         <div className="container mx-auto py-24">
-          <div className="display flex lg:flex-row flex-col-reverse items-center">
+          <div className="flex lg:flex-row flex-col-reverse items-center">
             <div className="p-12 text-xl">
               <h1 className="text-5xl xl:text-8xl mb-12 font-semibold">Who is this guy?</h1>
               <p className="text-sm sm:text-xl">
