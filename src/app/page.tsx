@@ -11,11 +11,11 @@ export default function Home() {
       <section className="">
         <Hero/>
       </section>
-      <section className="min-h-fit bg-[#073a4b] rounded-t-full">
-        <div className="container mx-auto py-24">
+      <section className="min-h-screen max-h-fit bg-[#073a4b] rounded-t-full">
+        <div className="container mx-auto py-12 lg:py-24">
           <div className="flex lg:flex-row flex-col-reverse items-center">
-            <div className="p-12 text-xl">
-              <h1 className="text-5xl xl:text-8xl mb-12 font-semibold">Who is this guy?</h1>
+            <div className="px-6 lg:px-12 text-xl">
+              <h1 className="text-5xl xl:text-7xl mb-12 font-semibold">Who Is This Guy?</h1>
               <p className="text-sm sm:text-xl">
                 Hello and welcome! My name is Christian Evans, and I'm an Information Technology Student at the <Link href="https://www.ucf.edu/" className="text-primary-500 underline">
                 University of Central Florida</Link>. I am a software engineer and IT technician with a passion for learning and growing my skills in thriving communities.
@@ -35,7 +35,7 @@ export default function Home() {
               </p>
             </div>
             <div className="">
-              <Image className="sm:rounded-[20rem] rounded-[10rem]  p-4" src="/images/heroimgs/me.jpg" alt="a picture of me" width={2400} height={3200}/>
+              <Image className="sm:rounded-[20rem] rounded-full p-5" src="/images/heroimgs/me.jpg" alt="a picture of me" width={2400} height={3200}/>
             </div>
           </div>
         </div>

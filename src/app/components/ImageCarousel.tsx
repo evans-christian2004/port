@@ -34,19 +34,19 @@ export default function ImageCarousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="embla relative max-w-4xl min-w-xl">
+    <div className="embla relative aspect-3/2 mx-auto my-5">
       {/* Viewport */}
-      <div className="embla__viewport overflow-hidden rounded-xl" ref={emblaRef}>
+      <div className="embla__viewport overflow-hidden rounded-4xl" ref={emblaRef}>
         <div className="embla__container flex">
           {images.map((src, index) => (
             <div
               key={index}
-              className="embla__slide flex w-40 items-center justify-center"
+              className="embla__slide flex aspect-3/2 items-center justify-center"
             >
               <img
                 src={src}
                 alt={`Slide ${index + 1}`}
-                className="object-cover w-[500px] h-[350px] rounded-4xl"
+                className="object-cover aspect-3/2 rounded-4xl"
               />
             </div>
           ))}
@@ -66,21 +66,6 @@ export default function ImageCarousel() {
       >
         <Image src="/icons/arrow.svg" className="-rotate-90" height={25} width={25} alt="right-arrow"/>
       </button>
-
-      {/* Progress Dots */}
-      <div className="flex justify-center gap-2 mt-4">
-        {scrollSnaps.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => emblaApi?.scrollTo(index)}
-            className={`w-3 h-3 rounded-full transition ${
-              index === selectedIndex
-                ? "bg-primary-500"
-                : "bg-white hover:bg-gray-500"
-            }`}
-          />
-        ))}
-      </div>
     </div>
   );
 };
