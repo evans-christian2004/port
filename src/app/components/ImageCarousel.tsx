@@ -9,7 +9,7 @@ type imageCarouselProps = {
 }
 
 export default function ImageCarousel({images}: imageCarouselProps) {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
 
