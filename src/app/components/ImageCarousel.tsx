@@ -4,13 +4,11 @@ import React, { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel, { UseEmblaCarouselType } from "embla-carousel-react";
 import Image from "next/image";
 
-const images = [
-  "/images/heroImgs/shell25group.jpg",
-  "/images/heroImgs/gemiknights25group.jpg",
-  "/images/heroImgs/startupgroup.jpg",
-];
+type imageCarouselProps = {
+    images: string[]
+}
 
-export default function ImageCarousel() {
+export default function ImageCarousel({images}: imageCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: false });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);

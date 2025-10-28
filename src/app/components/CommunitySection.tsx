@@ -4,12 +4,20 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 const CommunitySection = () => {
+  
+  const images: string[] = [
+    "/images/heroImgs/shell25group.jpg",
+    "/images/heroImgs/gemiknights25group.jpg",
+    "/images/heroImgs/startupgroup.jpg",
+  ];
   return (
     <div className='container mx-auto px-6 py-12 lg:px-12 lg:py-24 min-h-screen flex flex-col'>
       <h1 className='text-5xl xl:text-8xl font-semibold'>What Does He Do?</h1>
         <div className="mx-auto flex lg:flex-row flex-col-reverse items-center md:gap-12 justify-between">
             <div className="flex flex-col gap-5">
-              <ImageCarousel/>
+              <ImageCarousel 
+                images={images} 
+              />
               <Link 
                 className='group bg-primary-400 rounded-full flex items-center gap-2 justify-center p-10
                   hover:bg-[#e974e7] transition-all ease-in-out duration-300' 
