@@ -28,11 +28,11 @@ const SideNav = ({ isOpen }: SideNavProps) => {
         >
           Projects
         </Link>
-        <Link href="/blog" className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
+        {/* <Link href="/blog" className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
           ${pathname == "/blog" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
         >
             Blog
-        </Link>
+        </Link> */}
         </nav>
     </div>
   )
