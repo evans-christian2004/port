@@ -33,7 +33,7 @@ export function getProjectImages(folderName: string): string[] {
 
   return fs
     .readdirSync(dir)
-    .filter((file) => /\.(jpg|jpeg|png|webp|gif)$/i.test(file))
+    .filter((file) => /\.(jpg|jpeg)$/i.test(file))
     .sort((a, b) => {
       const numA = parseInt(a.match(/\d+/)?.[0] ?? "0");
       const numB = parseInt(b.match(/\d+/)?.[0] ?? "0");
@@ -58,8 +58,8 @@ export const projectsData = [
         ],
         repository: "https://github.com/evans-christian2004/alto-starter",
         isWinner: false,
-        primaryColor: "",
-        secondaryColor: "",
+        primaryColor: "#151A29",
+        secondaryColor: "#B0C3D2",
     },
     {
         name: "TL;DR",
@@ -77,13 +77,13 @@ export const projectsData = [
         repository: "https://github.com/evans-christian2004/the-tldr-app",
         demo: "https://the-tldr-app.vercel.app/",
         isWinner: false,
-        primaryColor: "",
-        secondaryColor: "",
+        primaryColor: "#352735",
+        secondaryColor: "#E2DCE3",
     },
     {
         name: "FE AI",
         subtext: "Your Next Foundation Exam Prep Tool",
-        description: "The University of Central Florida as of 20205 uses a foundation exam to determine which students remain in the Computer Science major and which get weeded out. This tool allows for users to practice for exam by whiteboarding answers to problems with auto grading using the Google Gemini API.",
+        description: "The University of Central Florida as of 2025 uses a foundation exam to determine which students remain in the Computer Science major and which get weeded out. This tool allows for users to practice for exam by whiteboarding answers to problems with auto grading using the Google Gemini API.",
         tags: [
             "TLDraw API", "TavaScript", "React", "Tailwind"
         ],
@@ -94,8 +94,8 @@ export const projectsData = [
         ],
         repository: "https://github.com/sebastian-noel/FE-AI",
         isWinner: false,
-        primaryColor: "",
-        secondaryColor: "",
+        primaryColor: "#242424",
+        secondaryColor: "#F6D164",
     },
     {
         name: "Sanity Blog Implimentation",
@@ -111,8 +111,8 @@ export const projectsData = [
         ],
         repository: "https://github.com/evans-christian2004/sanity-blog",
         demo: "https://sanity-blog-smoky.vercel.app/posts/the-best-and-second-article-of-all-time",
-        primaryColor: "",
-        secondaryColor: "",
+        primaryColor: "#0B1309",
+        secondaryColor: "#EBF7E8",
     },
     //will be added once its styled more
     // {
@@ -144,8 +144,8 @@ export const projectsData = [
 
         ],
         repository: "https://github.com/evans-christian2004/flashcards",
-        primaryColor: "",
-        secondaryColor: "",
+        primaryColor: "#427DB9",
+        secondaryColor: "#E0E8EA",
     },
     {
         name: "305 Life",
@@ -161,8 +161,8 @@ export const projectsData = [
         images: [
 
         ],
-        primaryColor: "",
-        secondaryColor: "",
+        primaryColor: "#12A6C0",
+        secondaryColor: "#E3D1C3",
     },
     {
         name: "BlackJack",
@@ -178,8 +178,8 @@ export const projectsData = [
         images: [
 
         ],
-        primaryColor: "",
-        secondaryColor: ""
+        primaryColor: "#02002A",
+        secondaryColor: "#E6F7FA"
     },
 ]
 

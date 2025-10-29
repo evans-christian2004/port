@@ -32,7 +32,7 @@ export default function ImageCarousel({images}: imageCarouselProps) {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="embla relative mx-auto my-5 sm:w-[45vw]">
+    <div className="embla relative mx-auto my-5">
       {/* Viewport */}
       <div className="embla__viewport overflow-hidden rounded-4xl" ref={emblaRef}>
         <div className="embla__container flex">

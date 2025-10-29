@@ -38,7 +38,7 @@ const SkillsSection = () => {
         <h1 className='text-5xl xl:text-8xl font-semibold'>Skills:</h1>
         {skills.map((category) => (
             <div key={category.category}>
-                <h2 className='mt-10 mb-8 text-5xl text-center'>{category.category}:</h2>
+                <h2 className='mt-10 mb-8 text-3xl sm:text-5xl text-center'>{category.category}:</h2>
                 <motion.ul 
                     className="flex justify-center flex-wrap gap-5"
                     variants={variants}

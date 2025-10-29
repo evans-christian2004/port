@@ -8,7 +8,10 @@ const page = () => {
     <div className='container mx-auto'>
       <h1 className='text-5xl xl:text-7xl mb-12 font-semibold'>Projects</h1>
       {projectsArray.map((project, index) => (
-        <ProjectCard key={index} project={project}/>
+        <ProjectCard 
+          key={index} 
+          project={project} 
+        />
       ))}
     </div>
   )
