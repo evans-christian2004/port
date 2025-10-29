@@ -9,8 +9,8 @@ type projectCardProps = {
 const ProjectCard = ({project}: projectCardProps) => {
   return (
     <div className="">
-        <Image src={project.images[0]} width={30} height={20} alt={project.name}/>
-        <h1>{project.name}</h1>
+        <Image src={project.images[0]} width={200} height={150} alt={project.name}/>
+        <h2>{project.name}</h2>
         <p>{project.description}</p>
         <div className="">
             {project.tags.map((name, index) => (

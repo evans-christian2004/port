@@ -1,3 +1,5 @@
+import path from "path";
+import fs from "fs";
 import type { skills } from "./skills"
 
 export type skillName = typeof skills[number]["skills"][number]["name"];
@@ -11,6 +13,8 @@ export type project = {
     tags: skillName[];
     //body text for the page of the project
     bodyText: string;
+    //folder name for images
+    folder: string;
     //images sources
     images: string[];
     repository: string;
@@ -21,7 +25,24 @@ export type project = {
     secondaryColor?: string;
 }
 
-export const projects: project[] = [
+//helper function that determines the number of images in each folder and creates an arrey of strings for them
+export function getProjectImages(folderName: string): string[] {
+  const dir = path.join(process.cwd(), "public/images/projects", folderName);
+
+  if (!fs.existsSync(dir)) return [];
+
+  return fs
+    .readdirSync(dir)
+    .filter((file) => /\.(jpg|jpeg|png|webp|gif)$/i.test(file))
+    .sort((a, b) => {
+      const numA = parseInt(a.match(/\d+/)?.[0] ?? "0");
+      const numB = parseInt(b.match(/\d+/)?.[0] ?? "0");
+      return numA - numB;
+    })
+    .map((file) => `/images/projects/${folderName}/${file}`);
+}
+
+export const projectsData = [
     {
         name: "Alto",
         subtext: "A Financial Planner That Does More",
@@ -31,8 +52,9 @@ export const projects: project[] = [
             "Google ADK", "Google Gemini API", "TypeScript", "Next.js", "React", "Tailwind"
         ],
         bodyText: "",
+        folder: "alto",
         images: [
-            
+            "/images/projects/alto/1.jpg",
         ],
         repository: "https://github.com/evans-christian2004/alto-starter",
         isWinner: false,
@@ -48,6 +70,7 @@ export const projects: project[] = [
              "Google Gemini API", "EllevenLabs API","TypeScript", "Next.js", "React", "Tailwind"
         ],
         bodyText: "",
+        folder: "tldr",
         images: [
 
         ],
@@ -65,6 +88,7 @@ export const projects: project[] = [
             "TLDraw API", "TavaScript", "React", "Tailwind"
         ],
         bodyText: "",
+        folder: "feai",
         images: [
 
         ],
@@ -81,6 +105,7 @@ export const projects: project[] = [
             "Sanity", "TypeScript", "Next.js", "React", "Tailwind"
         ],
         bodyText: "",
+        folder: "sanityblog",
         images: [
 
         ],
@@ -98,6 +123,7 @@ export const projects: project[] = [
     //         "React", "Supabase", "HTML", "CSS"
     //     ],
     //     bodyText: "",
+    //     folder: "creatorverse",
     //     images: [
 
     //     ],
@@ -113,6 +139,7 @@ export const projects: project[] = [
             "React", "JavaScript", "HTML", "CSS"
         ],
         bodyText: "",
+        folder: "flashcards",
         images: [
 
         ],
@@ -130,6 +157,7 @@ export const projects: project[] = [
         repository: "https://github.com/evans-christian2004/community-board",
         demo: "https://305-life.netlify.app/",
         bodyText: "",
+        folder: "305life",
         images: [
 
         ],
@@ -146,6 +174,7 @@ export const projects: project[] = [
         repository: "https://github.com/evans-christian2004/Black-Jack",
         demo: "https://dapper-paprenjak-fe854b.netlify.app/",
         bodyText: "",
+        folder: "blackjack",
         images: [
 
         ],
@@ -153,4 +182,10 @@ export const projects: project[] = [
         secondaryColor: ""
     },
 ]
+
+//dynamically populates images array in the project data with images in /images/projects/project.folder/<image index>
+export const projects: project[] = projectsData.map((p) => ({
+  ...p,
+  images: getProjectImages(p.folder),
+}));
 
