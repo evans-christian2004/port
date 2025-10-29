@@ -2,7 +2,7 @@ import type { skills } from "./skills"
 
 export type skillName = typeof skills[number]["skills"][number]["name"];
 
-type project = {
+export type project = {
     name: string;
     //project page will be headed by "name: subtext" when viewed
     subtext: string;
@@ -21,7 +21,7 @@ type project = {
     secondaryColor?: string;
 }
 
-const projects: project[] = [
+export const projects: project[] = [
     {
         name: "Alto",
         subtext: "A Financial Planner That Does More",
@@ -52,6 +52,7 @@ const projects: project[] = [
 
         ],
         repository: "https://github.com/evans-christian2004/the-tldr-app",
+        demo: "https://the-tldr-app.vercel.app/",
         isWinner: false,
         primaryColor: "",
         secondaryColor: "",
@@ -84,24 +85,26 @@ const projects: project[] = [
 
         ],
         repository: "https://github.com/evans-christian2004/sanity-blog",
+        demo: "https://sanity-blog-smoky.vercel.app/posts/the-best-and-second-article-of-all-time",
         primaryColor: "",
         secondaryColor: "",
     },
-    {
-        name: "Creatorverse",
-        subtext: "Share Your Favorite Creators",
-        description: "Everyones got their host of creators, and this website gives people the opportunity to share them. Using React and Supabase, users can share content creators they cant get enough of for others to see.",
-        tags: [
-            "React", "Supabase", "HTML", "CSS"
-        ],
-        bodyText: "",
-        images: [
+    //will be added once its styled more
+    // {
+    //     name: "Creatorverse",
+    //     subtext: "Share Your Favorite Creators",
+    //     description: "Everyones got their host of creators, and this website gives people the opportunity to share them. Using React and Supabase, users can share content creators they cant get enough of for others to see.",
+    //     tags: [
+    //         "React", "Supabase", "HTML", "CSS"
+    //     ],
+    //     bodyText: "",
+    //     images: [
 
-        ],
-        repository: "https://github.com/evans-christian2004/creatorverse",
-        primaryColor: "",
-        secondaryColor: "",
-    },
+    //     ],
+    //     repository: "https://github.com/evans-christian2004/creatorverse",
+    //     primaryColor: "",
+    //     secondaryColor: "",
+    // },
     {
         name: "Typescript Flash Cards",
         subtext: "A TypeScript Learning Flash Card Game",
@@ -125,6 +128,7 @@ const projects: project[] = [
             "React", "JavaScript", "HTML", "CSS"
         ],
         repository: "https://github.com/evans-christian2004/community-board",
+        demo: "https://305-life.netlify.app/",
         bodyText: "",
         images: [
 
@@ -140,6 +144,7 @@ const projects: project[] = [
             "JavaScript", "HTML", "CSS"
         ],
         repository: "https://github.com/evans-christian2004/Black-Jack",
+        demo: "https://dapper-paprenjak-fe854b.netlify.app/",
         bodyText: "",
         images: [
 

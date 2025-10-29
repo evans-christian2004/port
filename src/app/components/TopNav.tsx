@@ -71,11 +71,12 @@ const TopNav = () => {
           </div>
           
         ) : (
+          // hambuger navigation
           <div className="h-10">
             <button onClick={() => {
               setOpen(!open);
-            }} className='absolute top-8 right-10 z-20 p-0 m-0 hover:cursor-pointer'>
-              <Image src={`/icons/${open ? "x.svg" : "menu.svg"}`} height={40} width={40} alt='menu icon'/>
+            }} className='absolute top-9 right-10 z-20 p-0 m-0 hover:cursor-pointer'>
+              <Image src={`/icons/${open ? "x.svg" : "menu.svg"}`} height={35} width={35} alt='menu icon'/>
             </button>
               <div className={`${open ? "right-0" : "-right-20"}`}>
                 <SideNav isOpen={open}/>

@@ -6,18 +6,23 @@ import Image from 'next/image'
 const CommunitySection = () => {
   
   const images: string[] = [
-    "/images/heroImgs/shell25group.jpg",
-    "/images/heroImgs/gemiknights25group.jpg",
-    "/images/heroImgs/startupgroup.jpg",
+    "/images/projects/alto/4.jpg",
+    "/images/projects/alto/5.jpg",
+    "/images/projects/tldr/3.jpg",
+    "/images/projects/feai/4.jpg",
+    "/images/landing/startupgroup.jpg",
   ];
   return (
     <div className='container mx-auto px-6 py-12 lg:px-12 lg:py-24 min-h-screen flex flex-col'>
       <h1 className='text-5xl xl:text-8xl font-semibold'>What Does He Do?</h1>
         <div className="mx-auto flex lg:flex-row flex-col-reverse items-center md:gap-12 justify-between">
             <div className="flex flex-col gap-5">
-              <ImageCarousel 
-                images={images} 
-              />
+              <div className="sm:w-[45vw]">
+                <ImageCarousel 
+                  images={images} 
+                />
+              </div>
+              
               <Link 
                 className='group bg-primary-400 rounded-full flex items-center gap-2 justify-center p-10
                   hover:bg-[#e974e7] transition-all ease-in-out duration-300' 
@@ -32,7 +37,7 @@ const CommunitySection = () => {
                 <Image className='hidden md:inline' src="/icons/cta-arrow.svg" width={75} height={75} alt='diagonal-arrow'/>
               </Link>
             </div> 
-            <div className="mr-auto text-5xl xl:text-8xl md:mb-12 mt-10">
+            <div className="text-5xl xl:text-8xl md:mb-12 mt-10">
                 <p className='text-sm sm:text-xl'>
                   One of my favorite parts of being a student at UCF is getting to compete alongside 
                   my <Link href="https://club.knighthacks.org/" className="text-primary-500 underline">Knight Hacks</Link> brethren. 

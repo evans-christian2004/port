@@ -35,7 +35,7 @@ export default function Home() {
               </p>
             </div>
             <div className="">
-              <Image className="sm:rounded-[20rem] rounded-full p-5" src="/images/heroimgs/me.jpg" alt="a picture of me" width={2400} height={3200}/>
+              <Image className="sm:rounded-[20rem] rounded-full p-5" src="/images/landing/me.jpg" alt="a picture of me" width={2400} height={3200}/>
             </div>
           </div>
         </div>
