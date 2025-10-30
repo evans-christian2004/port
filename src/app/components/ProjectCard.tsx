@@ -1,46 +1,66 @@
-import React from 'react'
-import { project } from '../data/projects'
-import Image from 'next/image'
+import React from "react";
+import { project } from "../data/projects";
+import Image from "next/image";
 
-type projectCardProps = {
-    project: project
-}
+type ProjectCardProps = {
+  project: project;
+};
 
-const ProjectCard = ({project}: projectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
-    <div 
+    <div
       style={{
-        backgroundColor: project.primaryColor, 
-        //border: `2px solid ${project.secondaryColor}`,
-        color: project.secondaryColor
-      }} 
-        className="flex flex-col sm:flex-row gap-10 items-center p-10 m-2 rounded-[4rem] shadow-2xla">
-        <Image className='object-cover rounded-4xl shadow-2xl h-[32rem] w-[36rem]' src={project.images[0]} width={600} height={450} alt={project.name}/>
-        <div className="">
-          <h2 className='font-bold text-5xl'>{project.name}</h2>
-          <p className='text-2xl my-5'>{project.description}</p>
-          <div className="flex flex-wrap gap-1">
-              {project.tags.map((name, index) => (
-                  <p className={`font-semibold text-xl py-1 px-2 rounded-full border-2 border-[${project.secondaryColor}]`} key={index}>{name}</p>
-              ))}
-          </div>
-              <button
-                className='group rounded-full px-10 py-5 my-5 w-full
-                  hover:bg-[#e974e7] hover:cursor-pointer transition-all ease-in-out duration-300' 
-                style={{background: project.secondaryColor, color: project.primaryColor}}
-              >
-                <p 
-                className='text-2xl xl:text-5xl 2xl:text-6xl font-bold text-background-[B94DA1] 
-                  group-hover:mx-3 transition-all ease-in-out duration-300'
-                >
-                  SEE MORE
-                </p>
-              </button>
+        backgroundColor: project.primaryColor,
+        color: project.secondaryColor,
+      }}
+      className="flex flex-col sm:flex-row gap-10 items-center p-4 sm:p-10 m-2 rounded-[4rem] shadow-2xl"
+    >
+      {/* Image wrapper */}
+      <div className="relative w-full sm:w-[36rem] h-[12rem] sm:h-[32rem] rounded-4xl sm:rounded-4xl overflow-hidden shadow-2xl flex-shrink-0">
+        <Image
+          src={project.images[0]}
+          alt={project.name}
+          fill
+          className="object-cover rounded-4xl"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 36rem"
+        />
+      </div>
+
+      {/* Info section */}
+      <div className="flex-1">
+        <h2 className="font-bold text-3xl sm:text-5xl">{project.name}</h2>
+        <p className="text-sm sm:text-2xl my-5">{project.description}</p>
+
+        <div className="flex flex-wrap gap-1">
+          {project.tags.map((name, index) => (
+            <p
+              key={index}
+              className="font-semibold text-sm sm:text-xl py-1 px-2 rounded-full border-2"
+              style={{ borderColor: project.secondaryColor }}
+            >
+              {name}
+            </p>
+          ))}
         </div>
-        
+
+        <button
+          className="relative rounded-full px-10 py-5 my-5 w-full overflow-hidden transition-colors duration-300"
+          style={{
+            background: project.secondaryColor,
+            color: project.primaryColor,
+          }}
+        >
+          <span className="relative z-10 text-2xl xl:text-5xl 2xl:text-6xl font-bold">
+            SEE MORE
+          </span>
+          <span
+            className="pointer-events-none absolute inset-0 bg-current mix-blend-difference opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100"
+            aria-hidden="true"
+          />
+        </button>
+      </div>
     </div>
+  );
+};
 
-  )
-}
-
-export default ProjectCard
+export default ProjectCard;

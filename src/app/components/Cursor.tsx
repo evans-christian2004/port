@@ -40,24 +40,31 @@ export default function Cursor() {
   const { x, y } = useFollowPointer(ref);
   const scale = useSpring(1, { damping: 15, stiffness: 200, restDelta: 0.001 });
 
-  useEffect(() => {
-    const links = document.querySelectorAll("a, button, [role='button']");
-    
-    const handleEnter = () => scale.set(2);   // expand cursor
-    const handleLeave = () => scale.set(1);   // shrink back
+    useEffect(() => {
+    const selector = "a, button, [role='button']";
 
-    links.forEach((el) => {
-      el.addEventListener("mouseenter", handleEnter);
-      el.addEventListener("mouseleave", handleLeave);
-    });
+    const handlePointerOver = (event: PointerEvent) => {
+      const target = event.target as Element | null;
+      if (target?.closest(selector)) scale.set(2);
+    };
+
+    const handlePointerOut = (event: PointerEvent) => {
+      const target = event.target as Element | null;
+      if (!target?.closest(selector)) return;
+
+      const next = event.relatedTarget as Element | null;
+      if (!next?.closest(selector)) scale.set(1);
+    };
+
+    document.addEventListener("pointerover", handlePointerOver);
+    document.addEventListener("pointerout", handlePointerOut);
 
     return () => {
-      links.forEach((el) => {
-        el.removeEventListener("mouseenter", handleEnter);
-        el.removeEventListener("mouseleave", handleLeave);
-      });
+      document.removeEventListener("pointerover", handlePointerOver);
+      document.removeEventListener("pointerout", handlePointerOut);
     };
   }, [scale]);
+
 
   return (
     <motion.div

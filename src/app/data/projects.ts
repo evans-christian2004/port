@@ -47,7 +47,7 @@ export const projectsData = [
         name: "Alto",
         subtext: "A Financial Planner That Does More",
         description: 
-            "A finanial planner that that pulls a user's transaction history and displays onto a Calendar, allowing users to use an AI assistant to gain insights and better manage the timing of their financial transaction",
+            "A finanial planner that that pulls a user's transaction history and displays it onto a Calendar, allowing them to use an AI assistant to gain insights and better manage the timing of their financial transaction.",
         tags: [
             "Google ADK", "Google Gemini API", "TypeScript", "Next.js", "React", "Tailwind"
         ],
@@ -65,7 +65,7 @@ export const projectsData = [
         name: "TL;DR",
         subtext: "The Ultimate Multimodal Learning Assistant",
         description: 
-            "The ultimate learning assistant! TL;DR can take in multiple forms of input and format them into different mediums using the Gemini API for people who what their media in a different form",
+            "The ultimate learning assistant! TL;DR can take in multiple forms of input and format them into different mediums using the Gemini API for people who what their media in a different form.",
         tags: [
              "Google Gemini API", "EllevenLabs API","TypeScript", "Next.js", "React", "Tailwind"
         ],
@@ -134,7 +134,7 @@ export const projectsData = [
     {
         name: "Typescript Flash Cards",
         subtext: "A TypeScript Learning Flash Card Game",
-        description: "Before learning TypeScript, I wanted to become more familiar with the concepts, so I made a TypeScript flashcard game with react before jumping in to using the JavaScript Alternative",
+        description: "Before learning TypeScript, I wanted to become more familiar with the concepts, so I made a TypeScript flashcard game with react before jumping in to using the JavaScript Alternative.",
         tags: [
             "React", "JavaScript", "HTML", "CSS"
         ],
@@ -150,7 +150,7 @@ export const projectsData = [
     {
         name: "305 Life",
         subtext: "See What Miami Has to Offer",
-        description: "Miami has a lot to offer, and I wanted to show off my bustling home. As my first React project, I use the framework to show off some of the amazing sites and activities that can be done in Miami, Florida",
+        description: "Miami has a lot to offer, and I wanted to show off my bustling home. As my first React project, I use the framework to show off some of the amazing sites and activities that can be done in Miami, Florida.",
         tags: [
             "React", "JavaScript", "HTML", "CSS"
         ],
