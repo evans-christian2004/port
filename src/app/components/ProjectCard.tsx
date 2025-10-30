@@ -26,7 +26,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         />
       </div>
 
-      {/* Info section */}
+      {/* Info */}
       <div className="flex-1">
         <h2 className="font-bold text-3xl sm:text-5xl">{project.name}</h2>
         <p className="text-sm sm:text-lg md:text-xl my-5">{project.description}</p>
