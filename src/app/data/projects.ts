@@ -98,7 +98,7 @@ export const projectsData = [
         secondaryColor: "#F6D164",
     },
     {
-        name: "Sanity Blog Implimentation",
+        name: "Sanity Blog",
         subtext: "An Experiment With the Sanity CMS",
         description: "Sanity is a headless CMS platform that allows developers and content creators to more easily manage content. I wanted to try out this new product as a developer tool, So I made a simple project with it and learned a lot about CMS systems!",
         tags: [

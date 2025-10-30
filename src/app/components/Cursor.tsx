@@ -69,7 +69,7 @@ export default function Cursor() {
   return (
     <motion.div
       ref={ref}
-      className="fixed hidden md:block mix-blend-exclusion z-50 pointer-events-none"
+      className="fixed hidden lg:block mix-blend-exclusion z-50 pointer-events-none"
       style={{
         ...ball,
         x,
