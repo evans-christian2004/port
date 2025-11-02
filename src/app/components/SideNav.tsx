@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import React from 'react'
 
 type SideNavProps = {
-  isOpen: boolean;
+  isOpen: boolean,
 }
 
 const SideNav = ({ isOpen }: SideNavProps) => {
