@@ -1,94 +1,185 @@
-"use client"
-import Image from 'next/image'
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import React, { useEffect, useState } from 'react'
-import SideNav from './SideNav'
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
+import SideNav from "./SideNav";
 
 const TopNav = () => {
   const pathname = usePathname();
 
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [screenWidth, setScreenWidth] = useState<number>(0);
-  
+  const [screenWidth, setScreenWidth] = useState<number>(() =>
+    typeof window !== "undefined" ? window.innerWidth : 0,
+  );
+
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 500);
-      setOpen(false)
-    }
+      setOpen(false);
+    };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   useEffect(() => {
     const handleResize = () => setScreenWidth(window.innerWidth);
-    
+
     handleResize();
-    
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
-    return () => window.removeEventListener('resize', handleResize);
-  }, [screenWidth]);
+  const showFullNav = !scrolled && screenWidth > 600;
 
+  useEffect(() => {
+    if (showFullNav && open) {
+      setOpen(false);
+    }
+  }, [showFullNav, open]);
 
   return (
-    <nav className='z-20 p-4 top-0 sticky flex justify-between items-center container mx-auto'>
-      <Link href="/">
-        <Image
-          className='logo-shake transition-all ease-in-out'
-          src="/icons/Logo.svg"
-          width={50}
-          height={50}
-          alt='logo'
-        />
-      </Link>
-      {/*nav links*/}
-      <div className="z-20 bg-secondary-500 px-10 py-4 rounded-full transition-all ease-in-out">
-        {!scrolled && screenWidth > 600 ? (
-          <div className="flex gap-5 items-center">
-            <div className="flex gap-2">
-              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2' href="https://github.com/evans-christian2004"><Image className='' src="/icons/github-dark.svg" width={25} height={25} alt='github'/></Link>
-              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2' href="https://www.linkedin.com/in/evanschristian/"><Image src="/icons/linkedin-dark.svg" width={25} height={25} alt='github'/></Link>
-              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2' href="/CSResume.pdf"><Image src="/icons/resume-dark.svg" width={25} height={35} alt='github'/></Link>
-        </div>
-        <Link 
-          href="/experience"className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${pathname == "/experience" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
-        >
-          Experience
+    <>
+      <motion.nav
+        initial={false}
+        animate={{
+          paddingTop: scrolled ? 12 : 12,
+          paddingBottom: scrolled ? 12 : 12, 
+        }}
+        transition={{ duration: 0.15, ease: "easeOut" }}
+        className="container mx-auto flex items-center justify-between sticky top-0 z-20 px-4"
+      >
+        <Link href="/">
+          <Image
+            className="logo-shake"
+            src="/icons/Logo.svg"
+            width={50}
+            height={50}
+            alt="logo"
+          />
         </Link>
-        <Link href="/projects" className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
-          ${pathname == "/projects" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
-        >
-          Projects
-        </Link>
-        {/* <Link href="/blog" className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
-          ${pathname == "/blog" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
-        >
-            Blog
-        </Link> */}
-          </div>
-          
-        ) : (
-          // hambuger navigation
-          <div className="h-10">
-            <button onClick={() => {
-              setOpen(!open);
-            }} className='absolute top-9 right-10 z-20 p-0 m-0 hover:cursor-pointer'>
-              <Image src={`/icons/${open ? "x.svg" : "menu.svg"}`} height={35} width={35} alt='menu icon'/>
-            </button>
-              <div className={`${open ? "right-0" : "-right-20"}`}>
-                <SideNav isOpen={open}/>
-              </div>
-          </div>
-          
-          
-        )}
-        
-      </div>  
-    </nav>
-  )
-}
 
-export default TopNav
+        <motion.div
+          initial={false}
+          animate={{
+            paddingLeft: showFullNav ? 40 : 20,
+            paddingRight: showFullNav ? 40 : 20,
+            paddingTop: showFullNav ? 16 : 16,
+            paddingBottom: showFullNav ? 16 : 16,
+            borderRadius: showFullNav ? 999 : 9999,
+            scale: showFullNav ? 1 : 1,
+          }}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="relative z-20 flex items-center rounded-full bg-secondary-500"
+        >
+          <AnimatePresence mode="wait" initial={false}>
+            {showFullNav ? (
+              <motion.div
+                key="full-nav"
+                initial={{ opacity: 0,}}
+                animate={{ opacity: 1,}}
+                exit={{ opacity: 0,}}
+                transition={{ duration: 0.15, ease: "easeIn" }}
+                className="flex items-center gap-5"
+              >
+                <div className="flex gap-2">
+                  <Link
+                    className="bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2"
+                    href="https://github.com/evans-christian2004"
+                  >
+                    <Image
+                      src="/icons/github-dark.svg"
+                      width={25}
+                      height={25}
+                      alt="github"
+                    />
+                  </Link>
+                  <Link
+                    className="bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2"
+                    href="https://www.linkedin.com/in/evanschristian/"
+                  >
+                    <Image
+                      src="/icons/linkedin-dark.svg"
+                      width={25}
+                      height={25}
+                      alt="linkedin"
+                    />
+                  </Link>
+                  <Link
+                    className="bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2"
+                    href="/CSResume.pdf"
+                  >
+                    <Image
+                      src="/icons/resume-dark.svg"
+                      width={25}
+                      height={35}
+                      alt="resume"
+                    />
+                  </Link>
+                </div>
+                <Link
+                  href="/experience"
+                  className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${
+                    pathname === "/experience"
+                      ? "bg-foreground text-background hover:px-3 px-2"
+                      : ""
+                  }`}
+                >
+                  Experience
+                </Link>
+                <Link
+                  href="/projects"
+                  className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${
+                    pathname === "/projects"
+                      ? "bg-foreground text-background hover:px-3 px-2"
+                      : ""
+                  }`}
+                >
+                  Projects
+                </Link>
+              </motion.div>
+            ) : (
+              <motion.div
+                key="hamburger"
+                initial={{ opacity: 0, }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0,}}
+                transition={{ duration: 0.15, ease: "easeOut" }}
+                className="flex h-10 items-center justify-end"
+              >
+                <motion.button
+                  type="button"
+                  onClick={() => setOpen((prev) => !prev)}
+                  whileTap={{ scale: 0.92 }}
+                  className="flex h-4 w-12 items-center justify-center rounded-full"
+                  aria-label={open ? "Close navigation" : "Open navigation"}
+                >
+                  <motion.div
+                    initial={false}
+                    animate={{ rotate: open ? 90 : 0 }}
+                    transition={{ duration: 0.15, ease: "easeOut" }}
+                  >
+                    <Image
+                      src={`/icons/${open ? "x.svg" : "menu.svg"}`}
+                      height={35}
+                      width={35}
+                      alt="menu icon"
+                    />
+                  </motion.div>
+                </motion.button>
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </motion.div>
+      </motion.nav>
+      <SideNav isOpen={open} />
+    </>
+  );
+};
+
+export default TopNav;

@@ -1,21 +1,62 @@
-import React from 'react'
-import { projects } from '../data/projects'
-import ProjectCard from '../components/ProjectCard'
-import ProjectDisplay from '../components/ProjectDisplay'
+
+import * as motion from "motion/react-client";
+import React from "react";
+import { projects } from "../data/projects";
+import ProjectCard from "../components/ProjectCard";
 
 const page = () => {
-  const projectsArray = projects
-  return (
-    <div className='container mx-auto mb-12'>
-      <h1 className='text-center text-3xl sm:text-5xl xl:text-7xl sm:mb-12 mb-6 font-semibold'>Projects</h1>
-      {projectsArray.map((project, index) => (
-        <div key={index} className="sticky top-[2rem] sm:top-[8rem] mb-12">
-          <ProjectCard project={project}/>
-        </div>
-        
-      ))}
-    </div>
-  )
-}
+  const projectsArray = projects;
 
-export default page
+  // Define animation variants for the container and children
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // controls delay between cards
+      },
+    },
+  };
+
+  const itemVariants: any = {
+    hidden: { opacity: 0, y: -25 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  };
+
+  return (
+    <motion.div
+      className="container mx-auto mb-12"
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+    >
+      <motion.h1
+        className="text-center text-3xl sm:text-5xl xl:text-7xl sm:mb-6 mb-3 font-semibold"
+        variants={itemVariants}
+      >
+        Projects
+      </motion.h1>
+
+      <motion.p
+        className="text-center px-6 sm:px-36 text-xl sm:mb-8 mb-3"
+        variants={itemVariants}
+      >
+        I see every project as a chance to learn something new. Whether it's
+        mastering a framework, collaborating in hackathons, or building tools
+        that make life easier. Here's a look at the projects that have helped me
+        grow as a developer.
+      </motion.p>
+
+      {projectsArray.map((project, index) => (
+        <div
+          key={index}
+          className="sticky top-[2rem] sm:top-[8rem] mb-12"
+        >
+          <ProjectCard project={project} />
+        </div>
+      ))}
+    </motion.div>
+  );
+};
+
+export default page;

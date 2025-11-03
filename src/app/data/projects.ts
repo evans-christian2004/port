@@ -1,8 +1,6 @@
 import path from "path";
 import fs from "fs";
-import type { skills } from "./skills"
 
-export type skillName = typeof skills[number]["skills"][number]["name"];
 
 export type project = {
     name: string;
@@ -10,7 +8,7 @@ export type project = {
     subtext: string;
     description: string;
     //tags fpr each project, tags must me from the skills section (add to skills when you use stuff)
-    tags: skillName[];
+    tags: string[];
     //body text for the page of the project
     bodyText: string;
     //folder name for images
@@ -57,6 +55,7 @@ export const projectsData = [
             "/images/projects/alto/1.jpg",
         ],
         repository: "https://github.com/evans-christian2004/alto-starter",
+        devPost: "https://devpost.com/software/alto-m96ytw",
         isWinner: false,
         primaryColor: "#151A29",
         secondaryColor: "#B0C3D2",
@@ -75,6 +74,7 @@ export const projectsData = [
 
         ],
         repository: "https://github.com/evans-christian2004/the-tldr-app",
+        devPost: "https://devpost.com/software/multi-part-input-distribution",
         demo: "https://the-tldr-app.vercel.app/",
         isWinner: false,
         primaryColor: "#352735",
@@ -93,6 +93,7 @@ export const projectsData = [
 
         ],
         repository: "https://github.com/sebastian-noel/FE-AI",
+        devPost: "https://devpost.com/software/untitled-project-g6fl50ordx7m",
         isWinner: false,
         primaryColor: "#242424",
         secondaryColor: "#F6D164",
