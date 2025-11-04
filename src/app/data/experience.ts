@@ -8,19 +8,81 @@ export type experience = {
     tags: string[]
 }
 
-export const experiences: experience[] = [{
-    title: "IT Student Technician",
-    company: "University of Crentral Florda",
-    startDate: new Date(),
-    description: "",
-    responsibilities: [
-        "Provided tier 1 technical support for over 500 students, faculty, and staff, diagnosing and resolving hardware, software, and network connectivity issues for the University of Central Florida’s largest IT zone.",
-        "Administered Active Directory services, including user account creation, password resets, group policy management, and OU (Organizational Unit) maintenance to ensure secure access to network resources.",
-        "Maintained accurate and detailed documentation of 10+ daily customer interactions, handling service requests and technical recommendations to improve service efficiency and tracking.",
-        "Executed the end-to-end hardware lifecycle for university assets, including deployment, maintenance, and secure decommissioning of laptops, desktops (Windows and MacOS devices), and specialized equipment.",
-        "Automated IT onboarding tasks using bash scripts, boosting ticket resolution times by 32%.",
-    ],
-    tags: [
-        "TCP/IP", "Active Directory", "Windows", "MacOS", "Project Management", "Troubleshooting",
-    ]
-}]
+export const experiences: experience[] = [
+    {
+        title: "IT Student Technician",
+        company: "University of Central Florida",
+        startDate: new Date("7/1/2025"),
+        description:
+            "Provide Tier 1 technical support for UCF’s largest IT zone, assisting over 500 students, faculty, and staff. Manage Active Directory operations, handle hardware lifecycle tasks, and automate IT processes to improve resolution efficiency and service quality.",
+        responsibilities: [
+            "Diagnosed and resolved hardware, software, and network connectivity issues for over 500 students, faculty, and staff.",
+            "Administered Active Directory services including user account creation, password resets, and group policy management.",
+            "Handled full hardware lifecycle management: deployment, maintenance, and secure decommissioning of university devices.",
+            "Documented 10+ daily service requests and technical recommendations to enhance support tracking and efficiency.",
+            "Automated IT onboarding workflows with Bash scripts, improving resolution times by 32%."
+        ],
+        tags: [
+            "Active Directory",
+            "Windows",
+            "MacOS",
+            "Networking",
+            "System Administration",
+            "Bash",
+            "Troubleshooting",
+            "IT Support",
+            "Project Management"
+        ]
+    },
+    {
+        title: "Lead Consultation Agent",
+        company: "Geek Squad",
+        startDate: new Date("8/7/2024"),
+        endDate: new Date("9/21/2025"),
+        description:
+            "Lead a team of consultation agents to deliver exceptional customer service and technical support for complex software, hardware, and network issues. Oversee client consultations, manage escalations, and maintain service quality with a focus on clear communication and problem resolution.",
+        responsibilities: [
+            "Lead and trained a team of 3–5 Consultation Agents, providing mentorship on customer service best practices, troubleshooting, and product knowledge.",
+            "Maintained documentation of 30+ customer interactions daily, ensuring accurate service records and follow-ups.",
+            "Provided in-depth technical consultations for hardware, software, and network troubleshooting to non-technical customers.",
+            "Resolved 15+ escalated cases weekly, maintaining a 94% customer satisfaction rating.",
+            "Collaborated with team leads to improve support workflows and reduce case turnaround times."
+        ],
+        tags: [
+            "Customer Service",
+            "Technical Support",
+            "Leadership",
+            "Troubleshooting",
+            "Hardware",
+            "Networking",
+            "Communication",
+            "Retail IT"
+        ]
+    },
+    {
+        title: "Front-End Development Intern",
+        company: "The Startup Life",
+        startDate: new Date("7/1/2021"),
+        endDate: new Date("4/2/2022"),
+        description:
+            "Collaborated with a small team to design and develop responsive web interfaces for a Miami-based startup. Enhanced UI performance, improved user engagement, and contributed to the company’s brand visibility through creative front-end design and optimization.",
+        responsibilities: [
+            "Led a team of four front-end developers to build a dynamic, responsive website for a digital marketing and consulting startup.",
+            "Developed and deployed the company’s main landing page, enabling appointment booking and contact functionality.",
+            "Optimized UI and site performance, increasing user conversion rates by 27%.",
+            "Created interactive UI components with HTML, CSS, JavaScript, and React using Bootstrap for styling.",
+            "Collaborated closely with company leadership to align branding and functionality with business goals."
+        ],
+        tags: [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "React",
+            "Bootstrap",
+            "UI/UX",
+            "Web Design",
+            "Team Leadership",
+            "Responsive Development"
+        ]
+    }
+];

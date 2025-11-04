@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { Hero } from "./components/Hero";
+import { Hero } from "./components/sections/Hero";
 import Link from "next/link";
-import SkillsSection from "./components/SkillsSection";
-import IMakeThings from "./components/IMakeThings";
-import CommunitySection from "./components/CommunitySection";
+import SkillsSection from "./components/sections/SkillsSection";
+import IMakeThings from "./components/sections/IMakeThings";
+import CommunitySection from "./components/sections/CommunitySection";
 
 export default function Home() {
   return (

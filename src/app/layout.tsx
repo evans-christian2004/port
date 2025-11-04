@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Lexend } from "next/font/google";
 import "./globals.css";
-import TopNav from "./components/TopNav";
-import Footer from "./components/Footer";
-import Cursor from "./components/Cursor";
+import TopNav from "./components/layout/TopNav";
+import Footer from "./components/layout/Footer";
+import Cursor from "./components/ui/Cursor";
 
 
 const lexend = Lexend({

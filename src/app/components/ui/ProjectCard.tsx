@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { project } from "../data/projects";
+import { project } from "../../data/projects";
 import Image from "next/image";
 import ProjectDisplay from "./ProjectDisplay";
 

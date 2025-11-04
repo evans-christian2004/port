@@ -1,5 +1,5 @@
 import React from 'react'
-import ImageCarousel from './ImageCarousel'
+import ImageCarousel from '../ui/ImageCarousel'
 import Link from 'next/link'
 import Image from 'next/image'
 

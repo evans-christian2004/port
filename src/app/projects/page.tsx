@@ -2,7 +2,7 @@
 import * as motion from "motion/react-client";
 import React from "react";
 import { projects } from "../data/projects";
-import ProjectCard from "../components/ProjectCard";
+import ProjectCard from "../components/ui/ProjectCard";
 
 const page = () => {
   const projectsArray = projects;
@@ -38,7 +38,7 @@ const page = () => {
       </motion.h1>
 
       <motion.p
-        className="text-center px-6 sm:px-36 text-xl sm:mb-8 mb-3"
+        className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
         variants={itemVariants}
       >
         I see every project as a chance to learn something new. Whether it's

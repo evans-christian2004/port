@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useRef } from 'react'
-import { skills } from '../data/skills'
+import { skills } from '../../data/skills'
 import Link from 'next/link'
 import Image from 'next/image'
 import { easeInOut, motion } from "motion/react"

@@ -3,7 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { AnimatePresence, motion } from "motion/react";
-import { project } from "../data/projects";
+import { project } from "../../data/projects";
 import Image from "next/image";
 import ImageCarousel from "./ImageCarousel";
 

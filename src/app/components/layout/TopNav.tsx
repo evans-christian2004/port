@@ -150,13 +150,13 @@ const TopNav = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0,}}
                 transition={{ duration: 0.15, ease: "easeOut" }}
-                className="flex h-10 items-center justify-end"
+                className="flex sm:h-10 h-6 items-center justify-end"
               >
                 <motion.button
                   type="button"
                   onClick={() => setOpen((prev) => !prev)}
                   whileTap={{ scale: 0.92 }}
-                  className="flex h-4 w-12 items-center justify-center rounded-full"
+                  className="flex sm:h-4 h-2 sm:w-12 w-8 items-center justify-center rounded-full"
                   aria-label={open ? "Close navigation" : "Open navigation"}
                 >
                   <motion.div

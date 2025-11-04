@@ -2,7 +2,7 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
-import { LetterDisplay } from './LetterDisplay';
+import { LetterDisplay } from '../LetterDisplay';
 import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
