@@ -8,15 +8,30 @@ const experiencesArray = experiences
 export default function ExperienceSection() {
   const container: any = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.25 } },
+    visible: { transition: { staggerChildren: 0.20 } },
   };
   const seg: any = {
     hidden: { scaleY: 0 },
-    visible: { scaleY: 1, transition: { duration: 0.9, ease: "easeInOut" } },
+    visible: { scaleY: 1, transition: { duration: 0.6, ease: "easeInOut" } },
   };
   const item: any = {
     hidden: { opacity: 0, y: 48 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
+  };
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // controls delay between cards
+      },
+    },
+  };
+
+  const itemVariants: any = {
+    hidden: { opacity: 0, y: -25 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
   };
 
   /*
@@ -29,9 +44,26 @@ export default function ExperienceSection() {
    */
   return (
     <section className="container mx-auto">
-      <h2 className="text-center text-5xl xl:text-7xl font-semibold mb-4">
-        Experience
-      </h2>
+      <motion.div
+            className="container mx-auto mb-12"
+            initial="hidden"
+            animate="visible"
+            variants={containerVariants}
+      >
+        <motion.h1
+          className="text-center text-3xl sm:text-5xl xl:text-7xl sm:mb-6 mb-3 font-semibold"
+          variants={itemVariants}
+        >
+          Experience
+        </motion.h1>
+  
+        <motion.p
+          className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
+          variants={itemVariants}
+        >
+          Here my technical expereinces, I be experiencing things
+        </motion.p>
+      </motion.div>
 
       <motion.div
         initial="hidden"
@@ -53,7 +85,7 @@ export default function ExperienceSection() {
                 <motion.div
                   variants={seg}
                   className={[
-                    "absolute left-0 right-0 mx-auto w-[4px] h-full bg-primary-500 origin-top",
+                    "absolute left-0 right-0 mx-auto w-[2px] h-full bg-white origin-top",
                     isFirst ? "rounded-t-full" : "",
                     isLast ? "rounded-b-full" : "",
                   ].join(" ")}
