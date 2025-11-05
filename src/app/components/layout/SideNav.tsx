@@ -5,9 +5,10 @@ import React from 'react'
 
 type SideNavProps = {
   isOpen: boolean,
+  onClose: () => void,
 }
 
-const SideNav = ({ isOpen }: SideNavProps) => {
+const SideNav = ({ isOpen, onClose }: SideNavProps) => {
     const pathname = usePathname();
 
   return (
@@ -19,11 +20,11 @@ const SideNav = ({ isOpen }: SideNavProps) => {
         </div>
         <nav className='p-4 flex gap-5 flex-col justify-between items-center'>
             <Link 
-          href="/experience"className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${pathname == "/experience" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
+          href="/experience" onClick={onClose} className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${pathname == "/experience" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
         >
           Experience
         </Link>
-        <Link href="/projects" className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
+        <Link href="/projects" onClick={onClose} className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
           ${pathname == "/projects" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
         >
           Projects

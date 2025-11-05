@@ -36,12 +36,12 @@ const TopNav = () => {
   }, []);
 
   const showFullNav = !scrolled && screenWidth > 600;
+  
 
+  // Close the side nav when the route changes
   useEffect(() => {
-    if (showFullNav && open) {
-      setOpen(false);
-    }
-  }, [showFullNav, open]);
+    setOpen(false);
+  }, [pathname]);
 
   return (
     <>
@@ -177,7 +177,7 @@ const TopNav = () => {
           </AnimatePresence>
         </motion.div>
       </motion.nav>
-      <SideNav isOpen={open} />
+      <SideNav isOpen={open} onClose={() => setOpen(false)} />
     </>
   );
 };

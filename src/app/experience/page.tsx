@@ -61,7 +61,7 @@ export default function ExperienceSection() {
           className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
           variants={itemVariants}
         >
-          Here my technical expereinces, I be experiencing things
+          Every role I've taken—whether in IT, front-end development, or student leadership—has taught me the importance of teamwork, communication, and initiative. I've worked across university departments, hackathons, and student organizations to solve problems, collaborate, and build technology that connects people.
         </motion.p>
       </motion.div>
 
@@ -80,7 +80,7 @@ export default function ExperienceSection() {
               key={i}
               className="grid grid-cols-[4px_1fr] sm:grid-cols-[4px_1fr]"
             >
-              {/* Line column (4px wide) */}
+              {/* Line column */}
               <div className="relative">
                 <motion.div
                   variants={seg}
@@ -94,9 +94,10 @@ export default function ExperienceSection() {
 
               {/* Card column */}
               <motion.div variants={item} className="relative py-10 pl-8">
-                {/* Dot aligned with the line */}
+                {/* Dot */}
                 <span
-                  className="absolute top-8 -left-[10px] z-10 block h-4 w-4 rounded-full bg-primary-500 shadow"
+                  style={{background: exp.primaryColor}}
+                  className="absolute top-8 -left-[10px] block h-4 w-4 rounded-full shadow"
                   aria-hidden
                 />
                 <ExperienceCard experience={exp}/>

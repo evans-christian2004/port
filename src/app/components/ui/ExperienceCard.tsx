@@ -23,16 +23,25 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
     : `${monthNames[experience.startDate.getMonth()]} ${experience.startDate.getFullYear()} - Present`;
 
   return (
-    <article className="bg-[#0a3a4a] border border-primary-500 rounded-4xl shadow-xl p-6 mr-6">
-      <h3 className="text-2xl font-bold text-white">{experience.title}</h3>
-      <p className="text-primary-300 text-lg">{experience.company}</p>
+    <article 
+      className="border-2 rounded-4xl hover:shadow-2xl transition-all ease-in-out shadow-amber-50/25 p-6 mr-6"
+      style={{background: experience.secondaryColor, color: experience.primaryColor}}
+    >
+      <div className="flex items-center gap-3 mb-2">
+        <Image className="object-cover rounded-2xl h-15 w-15" src={experience.imageSrc} width={50} height={50} alt={experience.title}/>
+        <div className="">
+          <h3 className="text-2xl font-bold text-white">{experience.title}</h3>
+          <p className="text-primary-300 text-lg">{experience.company}</p>
+        </div>
+      </div> 
       <p className="text-sm text-gray-300 italic mb-3">{dateRangeString}</p>
       <p className="text-gray-100">{experience.description}</p>
 
       <motion.button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="mt-4 inline-flex bg-secondary-500 rounded-full w-full justify-center px-2 py-1 items-center gap-2 text-sm font-semibold text-primary-200 transition hover:text-white focus:outline-none"
+        className="mt-4 inline-flex rounded-full w-full justify-center px-2 py-1 items-center gap-2 text-sm font-semibold text-primary-200 transition hover:text-white focus:outline-none"
+        style={{background:experience.primaryColor, color:experience.secondaryColor}}
         aria-expanded={open}
       >
         {open ? "Hide Details" : "Show Details"}
@@ -40,10 +49,10 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
           initial={false}
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.2, ease: "easeInOut" }}
-          className="inline-block text-lg"
+          className=""
           aria-hidden
         >
-          <Image alt="down arrow" src="/icons/arrow.svg" width={15} height={15}/>
+          <span className="text-sm">▼</span>
         </motion.span>
       </motion.button>
 

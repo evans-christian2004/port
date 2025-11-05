@@ -5,10 +5,36 @@ export type experience = {
     endDate?: Date,
     description: string,
     responsibilities: string[],
-    tags: string[]
+    tags: string[],
+    imageSrc: string,
+    primaryColor: string,
+    secondaryColor: string,
 }
 
 export const experiences: experience[] = [
+    {
+        title: "Kickstart Mentee",
+        company: "Knight Hacks",
+        startDate: new Date("9/11/2025"),
+        description: "Participated in the Knight Hacks mentorship program, where I received one-on-one guidance from experienced mentors, collaborated with my mentee cohort on hackathon projects, and strengthened my technical and teamwork skills within UCF’s developer community.",
+        responsibilities: [
+            "Collaborated with a cohort of mentees to develop full-stack projects for hackathons and campus showcases.",
+            "Received individualized mentorship on programming fundamentals, software design, and industry best practices.",
+            "Attended Knight Hacks workshops and technical sessions focused on career advacement and development technologies",
+            "Worked closely with peers to practice agile workflows and present solutions to real-world problems during hackathons.",
+            "Engaged with UCF’s tech community to grow as a developer and prepare for leadership roles in future Knight Hacks events."
+        ],
+        tags: [
+            "Mentorship",
+            "Hackathons",
+            "Teamwork",
+            "Leadership Development",
+            "Community"
+        ],
+        imageSrc: "icons/experience-icons/kh.svg",
+        primaryColor: "#BA81F6",
+        secondaryColor: "#181423",
+    },
     {
         title: "IT Student Technician",
         company: "University of Central Florida",
@@ -32,7 +58,10 @@ export const experiences: experience[] = [
             "Troubleshooting",
             "IT Support",
             "Project Management"
-        ]
+        ],
+        imageSrc: "icons/experience-icons/ucfit.svg",
+        primaryColor: "#F6D164",
+        secondaryColor: "#242424",
     },
     {
         title: "Lead Consultation Agent",
@@ -57,7 +86,10 @@ export const experiences: experience[] = [
             "Networking",
             "Communication",
             "Retail IT"
-        ]
+        ],
+        imageSrc: "icons/experience-icons/geeksquad.svg",
+        primaryColor: "#F58136",
+        secondaryColor: "#010101",
     },
     {
         title: "Front-End Development Intern",
@@ -83,6 +115,10 @@ export const experiences: experience[] = [
             "Web Design",
             "Team Leadership",
             "Responsive Development"
-        ]
-    }
+        ],
+        imageSrc: "icons/experience-icons/thestartuplife.svg",
+        primaryColor: "#59CDFF",
+        secondaryColor: "#202938",
+    },
+
 ];
