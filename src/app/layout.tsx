@@ -4,6 +4,7 @@ import "./globals.css";
 import TopNav from "./components/layout/TopNav";
 import Footer from "./components/layout/Footer";
 import Cursor from "./components/ui/Cursor";
+import Preloader from "./components/ui/Preloader";
 
 
 const lexend = Lexend({
@@ -27,6 +28,7 @@ export default function RootLayout({
         <body
           className={`${lexend.variable} ${lexend.variable} antialiased`}
         >
+          <Preloader />
           <Cursor/>
           <TopNav/>
           {children}

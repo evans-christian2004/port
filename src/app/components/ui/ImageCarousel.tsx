@@ -41,11 +41,16 @@ export default function ImageCarousel({images}: imageCarouselProps) {
               key={index}
               className="embla__slide flex items-center justify-center"
             >
-              <img
-                src={src}
-                alt={`Slide ${index + 1}`}
-                className="object-cover aspect-3/2 rounded-4xl"
-              />
+              <div className="relative w-full aspect-3/2 overflow-hidden rounded-4xl">
+                <Image
+                  src={src}
+                  alt={`Slide ${index + 1}`}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 600px, (min-width: 768px) 75vw, 90vw"
+                  priority={index === 0}
+                />
+              </div>
             </div>
           ))}
         </div>
