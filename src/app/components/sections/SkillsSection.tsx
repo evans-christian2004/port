@@ -1,10 +1,10 @@
 "use client"
 
-import React, { useRef } from 'react'
+import React from 'react'
 import { skills } from '../../data/skills'
 import Link from 'next/link'
 import Image from 'next/image'
-import { easeInOut, motion } from "motion/react"
+import { motion } from "motion/react"
 
 const iconSize = 120;
 

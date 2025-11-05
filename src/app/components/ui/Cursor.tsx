@@ -1,6 +1,6 @@
 "use client";
 
-import { frame, motion, useSpring, useMotionValue } from "motion/react";
+import { frame, motion, useSpring } from "motion/react";
 import { RefObject, useEffect, useRef } from "react";
 
 //additional cursor styles

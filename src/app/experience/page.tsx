@@ -2,19 +2,18 @@ import * as motion from "motion/react-client";
 import React from "react";
 import { experiences } from "../data/experience";
 import ExperienceCard from "../components/ui/ExperienceCard";
-
-const experiencesArray = experiences
+import type { Variants } from "motion";
 
 export default function ExperienceSection() {
-  const container: any = {
+  const container: Variants = {
     hidden: {},
     visible: { transition: { staggerChildren: 0.20 } },
   };
-  const seg: any = {
+  const seg: Variants = {
     hidden: { scaleY: 0 },
     visible: { scaleY: 1, transition: { duration: 0.6, ease: "easeInOut" } },
   };
-  const item: any = {
+  const item: Variants = {
     hidden: { opacity: 0, y: 48 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.3, ease: "easeOut" } },
   };
@@ -29,7 +28,7 @@ export default function ExperienceSection() {
     },
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: -25 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
   };
@@ -61,7 +60,7 @@ export default function ExperienceSection() {
           className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
           variants={itemVariants}
         >
-          Every role I've taken—whether in IT, front-end development, or student leadership—has taught me the importance of teamwork, communication, and initiative. I've worked across university departments, hackathons, and student organizations to solve problems, collaborate, and build technology that connects people.
+          Every role I&apos;ve taken—whether in IT, front-end development, or student leadership—has taught me the importance of teamwork, communication, and initiative. I&apos;ve worked across university departments, hackathons, and student organizations to solve problems, collaborate, and build technology that connects people.
         </motion.p>
       </motion.div>
 

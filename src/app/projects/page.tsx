@@ -3,6 +3,7 @@ import * as motion from "motion/react-client";
 import React from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ui/ProjectCard";
+import type { Variants } from "motion";
 
 const page = () => {
   const projectsArray = projects;
@@ -18,7 +19,7 @@ const page = () => {
     },
   };
 
-  const itemVariants: any = {
+  const itemVariants: Variants = {
     hidden: { opacity: 0, y: -25 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
   };
@@ -41,9 +42,9 @@ const page = () => {
         className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
         variants={itemVariants}
       >
-        I see every project as a chance to learn something new. Whether it's
+        I see every project as a chance to learn something new. Whether it&apos;s
         mastering a framework, collaborating in hackathons, or building tools
-        that make life easier. Here's a look at the projects that have helped me
+        that make life easier. Here&apos;s a look at the projects that have helped me
         grow as a developer.
       </motion.p>
 

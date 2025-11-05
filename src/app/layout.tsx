@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Lexend } from "next/font/google";
+import { Lexend } from "next/font/google";
 import "./globals.css";
 import TopNav from "./components/layout/TopNav";
 import Footer from "./components/layout/Footer";

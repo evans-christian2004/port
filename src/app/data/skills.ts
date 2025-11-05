@@ -1,5 +1,3 @@
-import React from "react";
-
 export type Skill = {
     name: string;
     iconSrc: string;

@@ -1,6 +1,5 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useScroll, useTransform, motion } from 'framer-motion';
 
 const Footer = () => {
   return (
