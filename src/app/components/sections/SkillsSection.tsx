@@ -60,7 +60,7 @@ const SkillsSection = () => {
                                     width={iconSize} 
                                     alt={`${skill.name} icon`}
                                 />
-                                <h3 className='m-auto p-3 xs:p-0 sm:text-md text-sm text-center min-h-15 flex items-center justify-center'>{skill.name}</h3>
+                                <h3 className=' pt-2 sm:text-md text-sm text-center min-h-15 flex items-center justify-center'>{skill.name}</h3>
                             </Link>
                         </motion.li>
                     ))}

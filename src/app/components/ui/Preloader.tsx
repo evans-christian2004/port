@@ -37,7 +37,6 @@ export default function Preloader() {
         isLoaded ? "-translate-y-full pointer-events-none" : "translate-y-0"
       }`}
     >
-      <span className="text-6xl font-bold uppercase tracking-[0.3em]">Welcome</span>
     </div>
   );
 }

@@ -67,12 +67,10 @@ const TopNav = () => {
         <motion.div
           initial={false}
           animate={{
-            paddingLeft: showFullNav ? 40 : 20,
+            paddingLeft: showFullNav ? 16 : 20,
             paddingRight: showFullNav ? 40 : 20,
             paddingTop: showFullNav ? 16 : 16,
             paddingBottom: showFullNav ? 16 : 16,
-            borderRadius: showFullNav ? 999 : 9999,
-            scale: showFullNav ? 1 : 1,
           }}
           transition={{ duration: 0.3, ease: "easeOut" }}
           className="relative z-20 flex items-center rounded-full bg-secondary-500"
