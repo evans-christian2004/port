@@ -71,7 +71,7 @@ export const experiences: experience[] = [
         description:
             "Lead a team of consultation agents to deliver exceptional customer service and technical support for complex software, hardware, and network issues. Oversee client consultations, manage escalations, and maintain service quality with a focus on clear communication and problem resolution.",
         responsibilities: [
-            "Lead and trained a team of 3–5 Consultation Agents, providing mentorship on customer service best practices, troubleshooting, and product knowledge.",
+            "Led and trained a team of 3–5 Consultation Agents, providing mentorship on customer service best practices, troubleshooting, and product knowledge.",
             "Maintained documentation of 30+ customer interactions daily, ensuring accurate service records and follow-ups.",
             "Provided in-depth technical consultations for hardware, software, and network troubleshooting to non-technical customers.",
             "Resolved 15+ escalated cases weekly, maintaining a 94% customer satisfaction rating.",
