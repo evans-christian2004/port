@@ -63,7 +63,17 @@ export function Hero() {
       };
     }, []);
     return (
-      <div ref={ref} className="ml-8 xs:ml-8 sm:ml-12 md:ml-18 xl:ml-24  scroll-smooth select-none">
+      <div ref={ref} className="relative ml-8 xs:ml-8 sm:ml-12 md:ml-18 xl:ml-24 scroll-smooth select-none">
+        <div className="pointer-events-none absolute top-1/6 sm:top-1/8 right-0 -z-10">
+          <Image
+            src="/icons/flare/star1.svg"
+            alt="decorative star flare"
+            width={400}
+            height={400}
+            className="spin-slow"
+            priority
+          />
+        </div>
         {/* layout for two lines + sub-sentence */}
         <div className="-mt-36 mb-24 flex h-screen flex-col justify-end lg:mb-24">
           <div className="flex text-7xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] ">

@@ -25,7 +25,7 @@ export default function Preloader() {
 
   useEffect(() => {
     if (!isLoaded) return;
-    const hideDelay = setTimeout(() => setShouldRender(false), 400);
+    const hideDelay = setTimeout(() => setShouldRender(false), 900);
     return () => clearTimeout(hideDelay);
   }, [isLoaded]);
 
@@ -33,10 +33,11 @@ export default function Preloader() {
 
   return (
     <div
-      className={`fixed inset-0 z-[1000] flex flex-col items-center justify-center gap-4 bg-background transition-opacity duration-500 ${
-        isLoaded ? "opacity-0 pointer-events-none" : "opacity-100"
+      className={`fixed inset-0 z-[1000] flex flex-col items-center justify-center gap-4 bg-[#063A4C] text-white transition-transform duration-700 ease-in-out will-change-transform ${
+        isLoaded ? "-translate-y-full pointer-events-none" : "translate-y-0"
       }`}
     >
+      <span className="text-6xl font-bold uppercase tracking-[0.3em]">Welcome</span>
     </div>
   );
 }

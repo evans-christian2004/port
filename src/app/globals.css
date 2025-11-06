@@ -24,6 +24,14 @@
   100% { transform: rotate(0deg); }
 }
 
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.spin-slow {
+  animation: spin-slow 40s linear infinite;
+}
 
 :root {
   --background: #011926;

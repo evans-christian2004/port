@@ -48,11 +48,11 @@ const SkillsSection = () => {
                 >
                     {category.skills.map((skill) => (
                         <motion.li key={skill.name} 
-                            className='xs:w-35 xs:min-h-44 w-full p-4 rounded-4xl bg-secondary-500 
+                            className='xs:w-35 xs:min-h-44 w-30 p-4 rounded-4xl bg-secondary-500 
                             hover:shadow-lg hover:-translate-y-2 shadow-black transition-all ease-in-out'
                             variants={childVariants}
                         >
-                            <Link className='flex justify-between xs:flex-col' href={skill.url}>
+                            <Link className='flex justify-between flex-col' href={skill.url}>
                                 <Image 
                                     className='bg-white p-2 rounded-3xl' 
                                     src={skill.iconSrc} 
@@ -60,7 +60,7 @@ const SkillsSection = () => {
                                     width={iconSize} 
                                     alt={`${skill.name} icon`}
                                 />
-                                <h3 className='m-auto p-3 xs:p-0 text-center min-h-15 flex items-center justify-center'>{skill.name}</h3>
+                                <h3 className='m-auto p-3 xs:p-0 sm:text-md text-sm text-center min-h-15 flex items-center justify-center'>{skill.name}</h3>
                             </Link>
                         </motion.li>
                     ))}
