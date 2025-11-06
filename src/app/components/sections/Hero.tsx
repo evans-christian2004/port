@@ -76,7 +76,7 @@ export function Hero() {
         </div>
         {/* layout for two lines + sub-sentence */}
         <div className="-mt-36 mb-24 flex h-screen flex-col justify-end lg:mb-24">
-          <div className="flex text-7xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] ">
+          <div className="flex text-7xl shadow-white  xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] ">
             <LetterDisplay word={lines[0]} />
             <div className="w-4 sm:w-8" />
             <LetterDisplay word={lines[1]} />
