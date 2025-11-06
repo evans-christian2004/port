@@ -154,21 +154,25 @@ const TopNav = () => {
                   type="button"
                   onClick={() => setOpen((prev) => !prev)}
                   whileTap={{ scale: 0.92 }}
-                  className="flex sm:h-4 h-2 sm:w-12 w-8 items-center justify-center rounded-full"
+                  className="relative flex sm:h-10 h-8 sm:w-10 w-8 flex-col items-center justify-center rounded-full gap-1.5"
                   aria-label={open ? "Close navigation" : "Open navigation"}
+                  aria-expanded={open}
                 >
-                  <motion.div
-                    initial={false}
-                    animate={{ rotate: open ? 90 : 0 }}
-                    transition={{ duration: 0.15, ease: "easeOut" }}
-                  >
-                    <Image
-                      src={`/icons/${open ? "x.svg" : "menu.svg"}`}
-                      height={35}
-                      width={35}
-                      alt="menu icon"
-                    />
-                  </motion.div>
+                  <span
+                    className={`block h-1 w-full origin-center rounded-full bg-foreground transition-transform duration-200 ease-in-out ${
+                      open ? "translate-y-[12px] rotate-45" : ""
+                    }`}
+                  />
+                  <span
+                    className={`block h-1 w-full origin-center rounded-full bg-foreground transition-all duration-200 ease-in-out ${
+                      open ? "scale-x-0 opacity-0" : ""
+                    }`}
+                  />
+                  <span
+                    className={`block h-1 w-full origin-center rounded-full bg-foreground transition-transform duration-200 ease-in-out ${
+                      open ? "-translate-y-[8px] -rotate-45" : ""
+                    }`}
+                  />
                 </motion.button>
               </motion.div>
             )}
