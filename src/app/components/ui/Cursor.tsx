@@ -11,7 +11,7 @@ const ball = {
   borderRadius: "50%",
 };
 
-const spring = { damping: 15, stiffness: 200, restDelta: 0.001 };
+const spring = { damping: 25, stiffness: 450, restDelta: 0.001 };
 
 export function useFollowPointer(ref: RefObject<HTMLDivElement | null>) {
   const x = useSpring(0, spring);
