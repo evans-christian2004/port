@@ -18,10 +18,10 @@ export default function Home() {
               <h1 className="text-5xl xl:text-7xl mb-12 font-semibold">Who Is This Guy?</h1>
               <p className="text-sm sm:text-xl">
                 Hello and welcome! My name is Christian Evans, and I&apos;m a software engineer and IT technician studying Information Technology at the <Link href="https://www.ucf.edu/" className="text-primary-500 underline">
-                University of Central Florida</Link>. I've always had a passion for learning and growing my skills in thriving communities, so thats what I surround myself with!
+                University of Central Florida</Link>. I&apos;ve always had a passion for learning and growing my skills in thriving communities, so thats what I surround myself with!
                 As an active member of <Link href="https://club.knighthacks.org/" className="text-primary-500 underline">Knight Hacks</Link>, the primary software engineering 
                 student organization at UCF, as well as <Link href="https://www.colorstack.org/" className="text-primary-500 underline">Color Stack </Link> 
-                and <Link href="https://www.nsbeucf.org/" className="text-primary-500 underline">NSBE</Link> &#40;National Society of Black Engineers&#41; I'm able grow and contribute to communities that matter to me.
+                and <Link href="https://www.nsbeucf.org/" className="text-primary-500 underline">NSBE</Link> &#40;National Society of Black Engineers&#41; I&apos;m able grow and contribute to communities that matter to me.
 
               </p>
               <p className="text-sm sm:text-xl pt-6">

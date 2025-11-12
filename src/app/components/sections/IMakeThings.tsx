@@ -1,7 +1,6 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
 
 export default function ScrollHeader() {
   const { scrollYProgress } = useScroll();
