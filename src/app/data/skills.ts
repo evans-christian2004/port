@@ -41,8 +41,13 @@ export const skills: SkillCategory[] = [
             {
                 name: "C",
                 iconSrc: "/icons/skill-icons/c.svg",
-                url: "https://devdcs.io/c/",
+                url: "https://devdocs.io/c/",
             },
+            {
+                name: "SQL",
+                iconSrc: "/icons/skill-icons/sql.svg",
+                url: "https://sqldocs.org/a"
+            }
         ],
     },
     {
@@ -99,6 +104,11 @@ export const skills: SkillCategory[] = [
                 url: "https://www.docker.com/"
             },
             {
+                name: "Vercel",
+                iconSrc: "icons/skill-icons/vercel.svg",
+                url: "https://www.vercel.com/"
+            },
+            {
                 name: "Figma",
                 iconSrc: "/icons/skill-icons/figma.svg",
                 url: "https://help.figma.com/hc/en-us",
@@ -123,6 +133,11 @@ export const skills: SkillCategory[] = [
     {
         category: "APIs and Integrations",
         skills: [
+            {
+                name: "Google ADK",
+                iconSrc: "/icons/skill-icons/googleAdk.svg",
+                url: "https://docs.cloud.google.com/agent-builder/agent-development-kit/overview",
+            },
             {
                 name: "Google Gemini API",
                 iconSrc: "/icons/skill-icons/gemini.svg",

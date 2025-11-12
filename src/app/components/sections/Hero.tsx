@@ -93,7 +93,7 @@ export function Hero() {
     return (
       <div ref={ref} className="relative ml-8 xs:ml-8 sm:ml-12 md:ml-18 xl:ml-24 scroll-smooth select-none">
         {/* spinning star thingy */}
-        <div className="pointer-events-none absolute top-1/5 sm:top-1/6 right-0 -z-10">
+        <div className="pointer-events-none absolute top-1/4 sm:top-1/6 right-0 -z-10">
           <Image
             src="/icons/flare/star1.svg"
             alt="decorative star flare"

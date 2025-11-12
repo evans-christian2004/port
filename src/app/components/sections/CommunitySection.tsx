@@ -6,9 +6,9 @@ import Image from 'next/image'
 const CommunitySection = () => {
   
   const images: string[] = [
+    "/images/projects/tldr/3.jpg",
     "/images/projects/alto/4.jpg",
     "/images/projects/alto/5.jpg",
-    "/images/projects/tldr/3.jpg",
     "/images/projects/feai/4.jpg",
     "/images/landing/startupgroup.jpg",
   ];
