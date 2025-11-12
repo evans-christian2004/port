@@ -43,7 +43,7 @@ const page = () => {
         variants={itemVariants}
       >
         I see every project as a chance to learn something new. Whether it&apos;s
-        practicing with new libraries and framworks, collaborating in hackathons, or building tools
+        practicing with new libraries and framworks, collaborating in hackathons, or just building tools
         that make life easier. Here&apos;s a look at the projects that have helped me
         grow as a developer.
       </motion.p>
