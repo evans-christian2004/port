@@ -57,10 +57,11 @@ export default function ExperienceSection() {
         </motion.h1>
   
         <motion.p
-          className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
+          className="text-center px-6 sm:px-36 sm:text-lg text-sm sm:mb-4 mb-3"
           variants={itemVariants}
         >
-          Every role I&apos;ve taken—whether in IT, front-end development, or student leadership—has taught me the importance of teamwork, communication, and initiative. I&apos;ve worked across university departments, hackathons, and student organizations to solve problems, collaborate, and build technology that connects people.
+          Every role I&apos;ve taken—whether in IT, front-end development, or student leadership—has taught me the importance of teamwork, communication, and initiative. 
+          I&apos;ve worked across university departments, startups, and student organizations to solve problems, collaborate, and build technology that connects people.
         </motion.p>
       </motion.div>
 

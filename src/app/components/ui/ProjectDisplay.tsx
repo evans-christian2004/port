@@ -71,7 +71,7 @@ const ProjectDisplay = ({ project, open, onClose }: ProjectDisplayProps) => {
             <button
               type="button"
               onClick={onClose}
-              className="absolute sm:right-6 sm:top-6 right-1 top-1 rounded-full p-4 transition hover:translate-y-0.5 hover:opacity-80 hover:cursor-pointer"
+              className="absolute sm:right-3 sm:top-3 right-0.5 top-0.5 rounded-full p-4 transition hover:translate-y-0.5 hover:opacity-80 hover:cursor-pointer"
             >
               <Image src="/icons/x.svg" width={20} height={20} alt="close" />
             </button>
@@ -110,10 +110,18 @@ const ProjectDisplay = ({ project, open, onClose }: ProjectDisplayProps) => {
               </section>
 
               <section>
-                <h3 className="text-sm opacity-60">Overview</h3>
-                <p className="mt-3 whitespace-pre-line text-base sm:text-lg leading-loose">
-                  {project.bodyText?.trim() || "Detailed project write-up coming soon."}
-                </p>
+                <h3 className="text-lg">Overview</h3>
+                {project.bodyText ? (
+                  <div
+                    className="prose prose-invert leading-tight mt-3 mx-auto text-base sm:text-lg"
+                    dangerouslySetInnerHTML={{ __html: project.bodyText }}
+                    style={{color: project.secondaryColor}}
+                  />
+                ) : (
+                  <p className="mt-3 whitespace-pre-line text-base sm:text-lg leading-loose">
+                    Detailed project write-up coming soon.
+                  </p>
+                )}
               </section>
 
               <section className="flex flex-wrap gap-3">
