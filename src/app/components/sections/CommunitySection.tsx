@@ -48,8 +48,8 @@ const CommunitySection = () => {
                 </p>
                 <p className='text-sm sm:text-xl pt-6'>
                   My driving motivations are the people around me, and the sense of community I have 
-                  the pleasure of fostering in the tech community. Whether it&apos;s the late nights spent implementing a 
-                  feature for a hackathon with my team, the workshops where I grow my skills as 
+                  the pleasure of fostering in the tech community. The late nights spent implementing a 
+                  feature for a hackathon, the workshops where I grow my skills as 
                   a <Link href="/experience" className="text-primary-500 underline">Knight Hacks Kickstart Mentee</Link>, 
                   or just the time spent socializing with other developers on campus—community is a big part of what makes me succeed.
                 </p>
