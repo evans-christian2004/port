@@ -27,27 +27,27 @@ const sub = [
 const floatingShapes = [
   {
     className:
-      'absolute -left-8 -top-8 w-16 h-16 rounded-3xl bg-primary-500 shadow-xl shadow-primary-500/30',
+      'absolute -left-8 -top-8 sm:w-16 sm:h-16 w-8 h-4 rounded-3xl bg-primary-500',
     speed: 1.2,
   },
   {
     className:
-      'absolute right-6 top-16 w-20 h-20 rounded-full bg-primary-400 shadow-xl shadow-primary-400/30',
+      'absolute right-6 top-16 sm:w-20 sm:h-20 w-10 h-10 rounded-full bg-primary-400',
     speed: 0.9,
   },
   {
     className:
-      'absolute left-1/2 -bottom-10 -translate-x-1/2 w-24 h-24 rounded-[40%] bg-secondary-500 shadow-2xl shadow-secondary-500/30',
+      'absolute left-1/2 -bottom-10 -translate-x-1/2 sm:w-24 sm:h-24 w-16 h-16 rounded-[40%] bg-secondary-500',
     speed: 0.95,
   },
   {
     className:
-      'absolute left-[5%] bottom-8 w-12 h-12 rounded-2xl bg-secondary-600 shadow-lg shadow-secondary-600/30',
+      'absolute left-[5%] bottom-8 w-12 h-12 rounded-2xl bg-secondary-600',
     speed: 1.05,
   },
   {
     className:
-      'absolute right-[15%] -bottom-16 w-28 h-10 rounded-full bg-primary-500 shadow-lg shadow-primary-500/30',
+      'absolute right-[15%] -bottom-16 sm:w-28 sm:h-10 w-16 h-10 rounded-full bg-primary-500',
     speed: 0.9,
   },
 ];
@@ -62,7 +62,7 @@ function animateLettersOnScroll(ref: React.RefObject<HTMLDivElement>){
       console.log()
         const speed = parseFloat(letter.dataset.speed || '1');
         gsap.to(letter, {
-            y: (.895 - speed) * ScrollTrigger.maxScroll(window),
+            y: (0.72 - speed) * ScrollTrigger.maxScroll(window),
             rotation: getRandomRotation(),
             ease: 'power2.out',
             duration: 0.8,
@@ -84,7 +84,7 @@ export function Hero() {
       if (!ref.current) return;
 
       animateLettersOnScroll(ref as React.RefObject<HTMLDivElement>);
-      ScrollTrigger.refresh(); // refresh once instead of in an event listener
+      ScrollTrigger.refresh(); // refreshses instead of using an event listener
 
       return () => {
         ScrollTrigger.killAll(); // cleanup on unmount
@@ -92,12 +92,13 @@ export function Hero() {
     }, []);
     return (
       <div ref={ref} className="relative ml-8 xs:ml-8 sm:ml-12 md:ml-18 xl:ml-24 scroll-smooth select-none">
-        <div className="pointer-events-none absolute top-1/6 sm:top-1/8 right-0 -z-10">
+        {/* spinning star thingy */}
+        <div className="pointer-events-none absolute top-1/5 sm:top-1/6 right-0 -z-10">
           <Image
             src="/icons/flare/star1.svg"
             alt="decorative star flare"
-            width={400}
-            height={400}
+            width={450}
+            height={450}
             className="spin-slow"
             priority
           />
@@ -124,10 +125,8 @@ export function Hero() {
           </div>
           <Image className='ml-[calc(35vw)] sm:ml-[calc(40vw)] flex animate-bounce letter mt-12' alt="down arrow" src="/icons/arrow.svg" width={50} height={50}/>
         </div>
-        {/* I may keep this extra text section or I may not. removing it makes snapping sections easier but the extra letters are cool */}
-        <div className="mb-25 flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px]">
-        </div>
-        <div className="mb-25 flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] relative pointer-events-none">
+        {/* additional hidden letter and shapes that move up on scroll for a better effect */}
+        <div className="mb-25 flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] absolute pointer-events-none">
           {floatingShapes.map((shape, index) => (
             <div
               key={`floating-shape-${index}`}
@@ -142,4 +141,3 @@ export function Hero() {
       </div>
     )
 }
-// ...existing code...

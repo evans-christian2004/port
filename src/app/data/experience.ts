@@ -16,13 +16,13 @@ export const experiences: experience[] = [
         title: "Kickstart Mentee",
         company: "Knight Hacks",
         startDate: new Date("9/11/2025"),
-        description: "Participated in the Knight Hacks mentorship program, where I received one-on-one guidance from experienced mentors, collaborated with my mentee cohort on hackathon projects, and strengthened my technical and teamwork skills within UCF’s developer community.",
+        description: "Participated in the Knight Hacks mentorship program, where I received one-on-one guidance from experienced mentors, collaborated with my mentee cohort on hackathon projects, and strengthened my technical and teamwork skills within UCF's developer community.",
         responsibilities: [
             "Collaborated with a cohort of mentees to develop full-stack projects for hackathons and campus showcases.",
             "Received individualized mentorship on programming fundamentals, software design, and industry best practices.",
             "Attended Knight Hacks workshops and technical sessions focused on career advacement and development technologies",
             "Worked closely with peers to practice agile workflows and present solutions to real-world problems during hackathons.",
-            "Engaged with UCF’s tech community to grow as a developer and prepare for leadership roles in future Knight Hacks events."
+            "Engaged with UCF's tech community to grow as a developer and prepare for leadership roles in future Knight Hacks events."
         ],
         tags: [
             "Mentorship",
@@ -40,7 +40,7 @@ export const experiences: experience[] = [
         company: "University of Central Florida",
         startDate: new Date("7/1/2025"),
         description:
-            "Provide Tier 1 technical support for UCF’s largest IT zone, assisting over 500 students, faculty, and staff. Manage Active Directory operations, handle hardware lifecycle tasks, and automate IT processes to improve resolution efficiency and service quality.",
+            "Provide Tier 1 technical support for UCF's largest IT zone, assisting over 500 students, faculty, and staff. Manage Active Directory operations, handle hardware lifecycle tasks, and automate IT processes to improve resolution efficiency and service quality.",
         responsibilities: [
             "Diagnosed and resolved hardware, software, and network connectivity issues for over 500 students, faculty, and staff.",
             "Administered Active Directory services including user account creation, password resets, and group policy management.",
@@ -56,7 +56,7 @@ export const experiences: experience[] = [
             "System Administration",
             "Bash",
             "Troubleshooting",
-            "IT Support",
+            "Technical Support",
             "Project Management"
         ],
         imageSrc: "icons/experience-icons/ucfit.svg",
@@ -80,7 +80,7 @@ export const experiences: experience[] = [
         tags: [
             "Customer Service",
             "Technical Support",
-            "Leadership",
+            "Team Leadership",
             "Troubleshooting",
             "Hardware",
             "Networking",
@@ -97,10 +97,10 @@ export const experiences: experience[] = [
         startDate: new Date("7/1/2021"),
         endDate: new Date("4/2/2022"),
         description:
-            "Collaborated with a small team to design and develop responsive web interfaces for a Miami-based startup. Enhanced UI performance, improved user engagement, and contributed to the company’s brand visibility through creative front-end design and optimization.",
+            "Collaborated with a small team to design and develop responsive web interfaces for a Miami-based startup. Enhanced UI performance, improved user engagement, and contributed to the company's brand visibility through creative front-end design and optimization.",
         responsibilities: [
             "Led a team of four front-end developers to build a dynamic, responsive website for a digital marketing and consulting startup.",
-            "Developed and deployed the company’s main landing page, enabling appointment booking and contact functionality.",
+            "Developed and deployed the company's main landing page, enabling appointment booking and contact functionality.",
             "Optimized UI and site performance, increasing user conversion rates by 27%.",
             "Created interactive UI components with HTML, CSS, JavaScript, and React using Bootstrap for styling.",
             "Collaborated closely with company leadership to align branding and functionality with business goals."
