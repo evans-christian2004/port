@@ -24,6 +24,34 @@ const sub = [
   "Professional",
 ]
 
+const floatingShapes = [
+  {
+    className:
+      'absolute -left-8 -top-8 w-16 h-16 rounded-3xl bg-primary-500 shadow-xl shadow-primary-500/30',
+    speed: 1.2,
+  },
+  {
+    className:
+      'absolute right-6 top-16 w-20 h-20 rounded-full bg-primary-400 shadow-xl shadow-primary-400/30',
+    speed: 0.9,
+  },
+  {
+    className:
+      'absolute left-1/2 -bottom-10 -translate-x-1/2 w-24 h-24 rounded-[40%] bg-secondary-500 shadow-2xl shadow-secondary-500/30',
+    speed: 0.95,
+  },
+  {
+    className:
+      'absolute left-[5%] bottom-8 w-12 h-12 rounded-2xl bg-secondary-600 shadow-lg shadow-secondary-600/30',
+    speed: 1.05,
+  },
+  {
+    className:
+      'absolute right-[15%] -bottom-16 w-28 h-10 rounded-full bg-primary-500 shadow-lg shadow-primary-500/30',
+    speed: 0.9,
+  },
+];
+
 function getRandomRotation(){
     // 
     return Math.random() * 60 - 30;
@@ -34,7 +62,7 @@ function animateLettersOnScroll(ref: React.RefObject<HTMLDivElement>){
       console.log()
         const speed = parseFloat(letter.dataset.speed || '1');
         gsap.to(letter, {
-            y: (.90 - speed) * ScrollTrigger.maxScroll(window),
+            y: (.895 - speed) * ScrollTrigger.maxScroll(window),
             rotation: getRandomRotation(),
             ease: 'power2.out',
             duration: 0.8,
@@ -98,9 +126,20 @@ export function Hero() {
         </div>
         {/* I may keep this extra text section or I may not. removing it makes snapping sections easier but the extra letters are cool */}
         <div className="mb-25 flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px]">
+        </div>
+        <div className="mb-25 flex flex-wrap text-6xl font-semibold xs:text-[90px] xs:leading-none md:text-[120px] lg:text-[150px] xl:text-[210px] relative pointer-events-none">
+          {floatingShapes.map((shape, index) => (
+            <div
+              key={`floating-shape-${index}`}
+              className={`${shape.className} letter`}
+              data-speed={shape.speed}
+              aria-hidden="true"
+            />
+          ))}
           <LetterDisplay word={lines[3]} />
         </div>
         
       </div>
     )
 }
+// ...existing code...
