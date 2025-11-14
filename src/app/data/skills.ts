@@ -51,7 +51,7 @@ export const skills: SkillCategory[] = [
         ],
     },
     {
-        category: "Frameworks",
+        category: "Frameworks & Libraries",
         skills: [
             {
                 name: "React",
@@ -82,6 +82,11 @@ export const skills: SkillCategory[] = [
                 name: "Prisma",
                 iconSrc: "/icons/skill-icons/prisma.svg",
                 url: "https://www.prisma.io/"
+            },
+            {
+                name: "Sanity",
+                iconSrc: "/icons/skill-icons/sanity.svg",
+                url: "https://www.sanity.io/"
             }
         ],
     },
