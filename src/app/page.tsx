@@ -4,6 +4,7 @@ import Link from "next/link";
 import SkillsSection from "./components/sections/SkillsSection";
 import IMakeThings from "./components/sections/IMakeThings";
 import CommunitySection from "./components/sections/CommunitySection";
+import MoreSection from "./components/sections/MoreSection";
 
 export default function Home() {
   return (
@@ -45,7 +46,7 @@ export default function Home() {
         <CommunitySection/>
       </section>
       <section>
-        <SkillsSection/>
+        <MoreSection/>
       </section>
     </main>
   );

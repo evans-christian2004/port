@@ -29,6 +29,11 @@ const SideNav = ({ isOpen, onClose }: SideNavProps) => {
         >
           Projects
         </Link>
+        <Link href="/skills" onClick={onClose} className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
+          ${pathname == "/skills" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}
+        >
+          Skills
+        </Link>
         {/* blog section in development maybe */}
         {/* <Link href="/blog" className={`text-2xl hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 
           ${pathname == "/blog" ? "bg-foreground text-background hover:px-3 px-2" : ""}`}

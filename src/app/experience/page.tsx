@@ -7,7 +7,7 @@ import type { Variants } from "motion";
 export default function ExperienceSection() {
   const container: Variants = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.20 } },
+    visible: { transition: { staggerChildren: 0.30 } },
   };
   const seg: Variants = {
     hidden: { scaleY: 0 },
@@ -23,13 +23,13 @@ export default function ExperienceSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2, // controls delay between cards
+        staggerChildren: 0.2, 
       },
     },
   };
 
   const itemVariants: Variants = {
-    hidden: { opacity: 0, y: -25 },
+    hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
   };
 
@@ -57,7 +57,7 @@ export default function ExperienceSection() {
         </motion.h1>
   
         <motion.p
-          className="text-center px-6 sm:px-36 sm:text-lg text-sm sm:mb-4 mb-3"
+          className="text-center px-6 sm:px-36 sm:text-lg text-sm sm:-mb-12 -mb-6"
           variants={itemVariants}
         >
           Every role I&apos;ve taken—whether in IT, front-end development, or student leadership—has taught me the importance of teamwork, communication, and initiative. 

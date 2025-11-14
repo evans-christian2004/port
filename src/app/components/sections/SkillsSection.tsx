@@ -4,7 +4,7 @@ import React from 'react'
 import { skills } from '../../data/skills'
 import Link from 'next/link'
 import Image from 'next/image'
-import { motion } from "motion/react"
+import { motion, Variants } from "motion/react"
 
 const iconSize = 120;
 
@@ -30,19 +30,52 @@ const childVariants = {
         }
     }
 }
+ const containVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2, // controls delay between cards
+      },
+    },
+  };
+
+  const itVariants: Variants = {
+    hidden: { opacity: 0, y: -25 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  };
 
 const SkillsSection = () => {
 
   return (
-    <div className='container mx-auto px-6 py-12 lg:px-12 lg:py-24 min-h-screen'>
-        <h1 className='text-5xl xl:text-8xl font-semibold'>Skills:</h1>
+    <motion.div
+          className="container mx-auto mb-12"
+          initial="hidden"
+          animate="visible"
+          variants={containVariants}
+        >
+          <motion.h1
+            className="text-center text-3xl sm:text-5xl xl:text-7xl sm:mb-3 mb-2 font-semibold"
+            variants={itVariants}
+          >
+            Skills
+          </motion.h1>
+    
+          <motion.p
+            className="text-center px-6 sm:px-36 sm:text-xl text-sm"
+            variants={itVariants}
+          >
+            These are the technologies I&apos;ve learned and used across my classes, projects, and hackathons. I love building full-stack web apps 
+            that are both functional and visually engaging. combining modern frameworks, strong UI design, and efficient 
+            workflows assist me in bringing my ideas to life.
+          </motion.p>
         {skills.map((category) => (
             <div key={category.category}>
                 <motion.h2 
                     initial="hidden"
-                    whileInView="visible"
+                    animate="visible"
                     variants={variants}
-                    viewport={{ once: true, amount: 0.25 }}
+                    viewport={{ once: false, amount: 0 }}
                     className='mt-10 mb-8 text-3xl sm:text-5xl text-center'>
                         {category.category}:
                 </motion.h2>
@@ -50,8 +83,8 @@ const SkillsSection = () => {
                     className="flex justify-center flex-wrap gap-5"
                     variants={variants}
                     initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.1 }}
+                    animate="visible"
+                    viewport={{ once: false, amount: 0.0 }}
                 >
                     {category.skills.map((skill) => (
                         <motion.li key={skill.name} 
@@ -74,7 +107,7 @@ const SkillsSection = () => {
                 </motion.ul>
             </div>
         ))}
-    </div>
+    </motion.div>
   )
 }
 

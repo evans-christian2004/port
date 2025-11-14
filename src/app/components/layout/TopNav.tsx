@@ -12,9 +12,8 @@ const TopNav = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
-  const [screenWidth, setScreenWidth] = useState<number>(() =>
-    typeof window !== "undefined" ? window.innerWidth : 0,
-  );
+  const [screenWidth, setScreenWidth] = useState(0);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +34,7 @@ const TopNav = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const showFullNav = !scrolled && screenWidth > 600;
+  const showFullNav = !scrolled && screenWidth > 640;
   
 
   // Close the side nav when the route changes
@@ -56,6 +55,7 @@ const TopNav = () => {
       >
         <Link href="/">
           <Image
+            priority
             className="logo-shake"
             src="/icons/Logo.svg"
             width={50}
@@ -139,6 +139,16 @@ const TopNav = () => {
                   }`}
                 >
                   Projects
+                </Link>
+                <Link
+                  href="/skills"
+                  className={`hover:bg-foreground hover:text-background hover:px-3.5 py-1 rounded-full transition-all duration-300 ${
+                    pathname === "/skills"
+                      ? "bg-foreground text-background hover:px-3 px-2"
+                      : ""
+                  }`}
+                >
+                  Skills
                 </Link>
               </motion.div>
             ) : (
