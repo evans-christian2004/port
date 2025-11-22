@@ -12,7 +12,7 @@ export default function Home() {
       <section className="">
         <Hero/>
       </section>
-      <section className="min-h-screen max-h-fit bg-[#073a4b] rounded-t-full">
+      <section className="min-h-screen max-h-fit bg-[#073a4b] rounded-t-full flex items-center justify-center">
         <div className="container mx-auto py-12 lg:py-24">
           <div className="flex lg:flex-row flex-col-reverse items-center">
             <div className="px-6 lg:px-12 text-xl">

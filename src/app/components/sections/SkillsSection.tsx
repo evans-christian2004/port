@@ -55,19 +55,18 @@ const SkillsSection = () => {
           variants={containVariants}
         >
           <motion.h1
-            className="text-center text-3xl sm:text-5xl xl:text-7xl sm:mb-3 mb-2 font-semibold"
+            className="text-center text-3xl sm:text-5xl xl:text-7xl sm:mb-3 mb-1 font-semibold"
             variants={itVariants}
           >
             Skills
           </motion.h1>
     
           <motion.p
-            className="text-center px-6 sm:px-36 sm:text-xl text-sm"
+            className="text-center px-10 sm:px-36 sm:text-xl text-xs"
             variants={itVariants}
           >
-            These are the technologies I&apos;ve learned and used across my classes, projects, and hackathons. I love building full-stack web apps 
-            that are both functional and visually engaging. combining modern frameworks, strong UI design, and efficient 
-            workflows assist me in bringing my ideas to life.
+            These are the technologies I&apos;ve learned and used across my classes, projects, and hackathons. 
+            Click into them for more information or resources I used to learn them.
           </motion.p>
         {skills.map((category) => (
             <div key={category.category}>
@@ -76,7 +75,7 @@ const SkillsSection = () => {
                     animate="visible"
                     variants={variants}
                     viewport={{ once: false, amount: 0 }}
-                    className='mt-10 mb-8 text-3xl sm:text-5xl text-center'>
+                    className='sm:mt-10 sm:mb-8 mt-5 mb-1 text-3xl sm:text-5xl text-center'>
                         {category.category}:
                 </motion.h2>
                 <motion.ul 
