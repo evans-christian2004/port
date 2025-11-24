@@ -32,7 +32,7 @@ const MoreSection = () => {
         <h1 className='text-5xl xl:text-8xl font-semibold'>A little more...</h1>
         <div className="grid grid-cols-5 grid-rows-3 gap-5 h-full w-full">
             <div className="h-full w-full bg-black/35 rounded-4xl col-span-2 row-span-2 flex flex-col items-center justify-center p-5">
-                <h2 className='text-4xl font-semibold'>The Peeps&trade;</h2>
+                <h2 className='text-4xl font-semibold'>My people</h2>
                 <p>This is who I do everything for.</p>
                 <div className="w-full">
                     <ImageCarousel images={fam}/>
@@ -54,7 +54,7 @@ const MoreSection = () => {
                 <Controllers/>
             </div>
             <div className="h-full w-full bg-black/35 rounded-4xl col-span-2 flex flex-col gap-3 px-6 py-4">
-                <h2 className='text-3xl font-semibold text-center'>Manga I'm reading</h2>
+                <h2 className='text-3xl font-semibold text-center'>Manga I&apos;m reading</h2>
                 <div className="flex grow items-start justify-evenly gap-4">
                 {
                     manga.map((m) => (
