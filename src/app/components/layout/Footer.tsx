@@ -5,18 +5,19 @@ const Footer = () => {
   return (
     <div className="bg-primary-500 text-background md:h-36 h-60">
         <div className='flex md:flex-row flex-col gap-5 justify-around items-center pt-6 pb-6'>
-            <div className="px-12">
-              <Link href="/">
+            <div className="">
+              <Link className='flex items-center gap-1' href="/">
                 <Image
                   className='logo-shake transition-all ease-in-out'
                   src="/icons/Logo-dark.svg"
-                  width={50}
-                  height={50}
+                  width={35}
+                  height={35}
                   alt='logo'
                 />
+                <p className='font-semibold text-2xl'>chritianevas.dev</p>
               </Link>
             </div>
-            <div className="">
+            <div className="relative md:right-10 top-1">
                 Made with <Image className='inline' src="/icons/heart.svg" width={32} height={32} alt="love"/> by Chris
             </div>
             <div className="flex gap-1">

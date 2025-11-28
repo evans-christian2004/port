@@ -8,29 +8,7 @@ import { motion, Variants } from "motion/react"
 
 const iconSize = 120;
 
-const variants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: .25,
-            staggerChildren: 0.15,
-            when: "beforeChildren",
-        }
-    }
-}
-const childVariants = {
-    hidden: { opacity: 0, y: -30 },
-    visible: {
-        opacity: 1,
-        y: 0,
-        transition: {
-            duration: 0.15,
-        }
-    }
-}
- const containVariants = {
+const containVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
@@ -43,6 +21,36 @@ const childVariants = {
   const itVariants: Variants = {
     hidden: { opacity: 0, y: -25 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+  };
+
+  const categoryVariants = {
+    hidden: { opacity: 0, y: -16 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.25,
+        staggerChildren: 0.12,
+        when: "beforeChildren",
+      },
+    },
+  };
+
+  const listVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const listItemVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.15 },
+    },
   };
 
 const SkillsSection = () => {
@@ -69,27 +77,26 @@ const SkillsSection = () => {
             Click into them for more information or resources I used to learn them.
           </motion.p>
         {skills.map((category) => (
-            <div key={category.category}>
+            <motion.div
+              key={category.category}
+              variants={categoryVariants}
+              initial="hidden"
+              animate="visible"
+            >
                 <motion.h2 
-                    initial="hidden"
-                    animate="visible"
-                    variants={variants}
-                    viewport={{ once: false, amount: 0 }}
+                    variants={categoryVariants}
                     className='sm:mt-10 sm:mb-8 mt-5 mb-1 text-3xl sm:text-5xl text-center'>
                         {category.category}:
                 </motion.h2>
                 <motion.ul 
                     className="flex justify-center flex-wrap gap-5"
-                    variants={variants}
-                    initial="hidden"
-                    animate="visible"
-                    viewport={{ once: false, amount: 0.0 }}
+                    variants={listVariants}
                 >
                     {category.skills.map((skill) => (
                         <motion.li key={skill.name} 
                             className='xs:w-35 xs:min-h-44 w-30 p-4 rounded-4xl bg-secondary-500 
                             hover:shadow-lg hover:-translate-y-2 shadow-black transition-all ease-in-out'
-                            variants={childVariants}
+                            variants={listItemVariants}
                         >
                             <Link className='flex justify-between flex-col' href={skill.url}>
                                 <Image 
@@ -104,7 +111,7 @@ const SkillsSection = () => {
                         </motion.li>
                     ))}
                 </motion.ul>
-            </div>
+            </motion.div>
         ))}
     </motion.div>
   )
