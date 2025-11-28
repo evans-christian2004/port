@@ -5,10 +5,11 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 
 type imageCarouselProps = {
-    images: string[]
+    images: string[];
+    color?: string;
 }
 
-export default function ImageCarousel({images}: imageCarouselProps) {
+export default function ImageCarousel({images, color}: imageCarouselProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [scrollSnaps, setScrollSnaps] = useState<number[]>([]);
@@ -59,13 +60,15 @@ export default function ImageCarousel({images}: imageCarouselProps) {
       {/* Prev/Next Buttons */}
       <button
         onClick={scrollPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 bg-secondary-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition"
+        className="absolute left-4 top-1/2 -translate-y-1/2 bg-secondary-500 rounded-full w-10 h-10 flex items-center justify-center hover:cursor-pointer transition"
+        style={{background: color}}
       >
         <Image src="/icons/arrow.svg" className="rotate-90" height={25} width={25} alt="right-arrow"/>
       </button>
       <button
         onClick={scrollNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary-500 rounded-full w-10 h-10 flex items-center justify-center hover:bg-black transition"
+        className="absolute right-4 top-1/2 -translate-y-1/2 bg-secondary-500 rounded-full w-10 h-10 flex items-center justify-center hover:cursor-pointer transition"
+        style={{background: color, opacity: 70}}
       >
         <Image src="/icons/arrow.svg" className="-rotate-90" height={25} width={25} alt="right-arrow"/>
       </button>

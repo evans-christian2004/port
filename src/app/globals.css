@@ -50,6 +50,10 @@ body {
   font-family: "Lexend";
 }
 
+strong {
+  text-decoration: solid underline var(--color-secondary-600) 3px;
+}
+
 .embla {
   overflow: hidden;
 }

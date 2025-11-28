@@ -91,7 +91,7 @@ const ProjectDisplay = ({ project, open, onClose }: ProjectDisplayProps) => {
                   </p>
                 )}
                 <div>
-                  <ImageCarousel images={project.images} />
+                  <ImageCarousel images={project.images} color={project.secondaryColor}/>
                 </div>
               </header>
 
