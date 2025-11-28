@@ -26,13 +26,13 @@ const Rubix = () => {
 
   return (
     <div className="flex flex-col items-center gap-1 p-4">
-      <h2 className='text-3xl font-semibold text-center'>I love this cube</h2>
+      <h2 className='text-3xl font-semibold text-center pb-5'>I love this cube:</h2>
       <motion.button
         type="button"
         onClick={scrambleTileSet}
         whileTap={{ y: 4 }}
         transition={{ duration: 0.08, ease: 'easeOut' }}
-        className="rounded-2x p-1 transition hover:-translate-y-1"
+        className="rounded-2xl p-1 transition hover:-translate-y-1"
       >
         <div className="grid grid-cols-3 gap-1 rounded-xl bg-gray-200 p-1">
           {tiles.map((color, index) => (

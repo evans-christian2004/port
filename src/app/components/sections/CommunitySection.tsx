@@ -13,7 +13,7 @@ const CommunitySection = () => {
     "/images/landing/startupgroup.jpg",
   ];
   return (
-    <div className='container mx-auto py-12 lg:py-24 min-h-screen flex flex-col'>
+    <div className='container mx-auto xl:px-0 px-5 py-12 lg:py-24 min-h-screen flex flex-col'>
       <h1 className='text-5xl xl:text-8xl font-semibold'>What Does He Do?</h1>
         <div className="mx-auto flex lg:flex-row flex-col-reverse items-center md:gap-12 justify-between">
             <div className="flex flex-col gap-5">

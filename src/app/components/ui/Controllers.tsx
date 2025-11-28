@@ -269,7 +269,7 @@ const FightStickController = () => {
           >
           </button>
         </div>
-      <div className="flex flex-col gap-3 md:flex-row">
+      <div className="flex gap-3">
         <div className="flex justify-center items-center md:w-1/3">
           <Joystick
             size={58}
@@ -297,7 +297,7 @@ const Controllers = () => {
   return (
     <div className="flex h-full w-full flex-col gap-3 p-4 text-white">
       <h2 className='text-3xl font-semibold text-center'>I love fighting games</h2>
-      <div className="flex items-center justify-around gap-3">
+      <div className="flex sm:flex-row flex-col items-center justify-around gap-3">
         <GameCubeController />
         <FightStickController />
       </div>
