@@ -60,10 +60,17 @@ export const metadata: Metadata = {
       "Developer portfolio highlighting projects, experience, and community involvement from Christian Evans.",
     images: ["/opengraph-image.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-  },
+    robots: {
+      index: true,
+      follow: true,
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.svg", type: "image/svg+xml" },
+        { url: "/icon.svg", type: "image/svg+xml" },
+      ],
+      shortcut: "/favicon.svg",
+    },
 };
 
 export default function RootLayout({
