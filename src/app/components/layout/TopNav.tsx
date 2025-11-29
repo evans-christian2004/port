@@ -56,7 +56,7 @@ const TopNav = () => {
         <Link href="/">
           <Image
             priority
-            className="logo-shake"
+            className="hover:animate-logo"
             src="/icons/Logo.svg"
             width={50}
             height={50}

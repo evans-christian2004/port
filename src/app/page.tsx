@@ -1,10 +1,38 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Hero } from "./components/sections/Hero";
 import Link from "next/link";
-import SkillsSection from "./components/sections/SkillsSection";
 import IMakeThings from "./components/sections/IMakeThings";
 import CommunitySection from "./components/sections/CommunitySection";
 import MoreSection from "./components/sections/MoreSection";
+
+export const metadata: Metadata = {
+  title: "About | Christian Evans",
+  description:
+    "Dive into Christian Evans' portfolio—software engineering projects, IT experience, and community work from a Florida-based developer focused on performant web experiences.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    title: "About | Christian Evans",
+    description:
+      "Explore the projects, story, and community impact of Christian Evans, a Next.js developer and IT professional in Orlando, FL.",
+    images: [
+      {
+        url: "/images/landing/me.jpg",
+        width: 1200,
+        height: 1600,
+        alt: "Portrait of Christian Evans",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About | Christian Evans",
+    description:
+      "Christian Evans' portfolio of software projects, IT work, and community leadership.",
+    images: ["/images/landing/me.jpg"],
+  },
+};
 
 export default function Home() {
   return (

@@ -1,8 +1,28 @@
+import type { Metadata } from "next";
 import * as motion from "motion/react-client";
 import React from "react";
 import { experiences } from "../data/experience";
 import ExperienceCard from "../components/ui/ExperienceCard";
 import type { Variants } from "motion";
+
+export const metadata: Metadata = {
+  title: "Experience | Christian Evans",
+  description:
+    "Career timeline for Christian Evans: IT technician at UCF, front-end engineering internships, and leadership across developer communities.",
+  alternates: { canonical: "/experience" },
+  openGraph: {
+    url: "/experience",
+    title: "Experience | Christian Evans",
+    description:
+      "Roles and impact from Christian Evans across IT support, frontend engineering, and student leadership.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Experience | Christian Evans",
+    description:
+      "Roles and impact from Christian Evans across IT support, frontend engineering, and student leadership.",
+  },
+};
 
 export default function ExperienceSection() {
   const container: Variants = {

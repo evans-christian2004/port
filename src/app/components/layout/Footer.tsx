@@ -8,7 +8,7 @@ const Footer = () => {
             <div className="">
               <Link className='flex items-center gap-1' href="/">
                 <Image
-                  className='logo-shake transition-all ease-in-out'
+                  className='hover:animate-logo'
                   src="/icons/Logo-dark.svg"
                   width={35}
                   height={35}

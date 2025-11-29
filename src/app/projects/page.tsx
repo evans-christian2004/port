@@ -1,9 +1,29 @@
 
+import type { Metadata } from "next";
 import * as motion from "motion/react-client";
 import React from "react";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ui/ProjectCard";
 import type { Variants } from "motion";
+
+export const metadata: Metadata = {
+  title: "Projects | Christian Evans",
+  description:
+    "Browse Christian Evans' software projects—from hackathon builds to production-ready web apps—covering Next.js, TypeScript, AI workflows, and UI engineering.",
+  alternates: { canonical: "/projects" },
+  openGraph: {
+    url: "/projects",
+    title: "Projects | Christian Evans",
+    description:
+      "Selected projects by Christian Evans highlighting Next.js, TypeScript, AI integrations, and UI engineering.",
+  },
+  twitter: {
+    card: "summary",
+    title: "Projects | Christian Evans",
+    description:
+      "Selected projects by Christian Evans highlighting Next.js, TypeScript, AI integrations, and UI engineering.",
+  },
+};
 
 const page = () => {
   const projectsArray = projects;
