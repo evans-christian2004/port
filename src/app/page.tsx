@@ -18,10 +18,10 @@ export const metadata: Metadata = {
       "Explore the projects, story, and community impact of Christian Evans, a Next.js developer and IT professional in Orlando, FL.",
     images: [
       {
-        url: "/images/landing/me.jpg",
-        width: 1200,
-        height: 1600,
-        alt: "Portrait of Christian Evans",
+        url: "/opengraph-image.jpg",
+        width: 2802,
+        height: 1512,
+        alt: "Christian Evans portfolio cover",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     title: "About | Christian Evans",
     description:
       "Christian Evans' portfolio of software projects, IT work, and community leadership.",
-    images: ["/images/landing/me.jpg"],
+    images: ["/opengraph-image.jpg"],
   },
 };
 

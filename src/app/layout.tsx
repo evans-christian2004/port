@@ -46,10 +46,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/images/landing/me.jpg",
-        width: 1200,
-        height: 1600,
-        alt: "Christian Evans portfolio portrait",
+        url: "/opengraph-image.jpg",
+        width: 2802,
+        height: 1512,
+        alt: "Christian Evans portfolio cover",
       },
     ],
   },
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     title: "Christian Evans | Software Engineer & IT Professional",
     description:
       "Developer portfolio highlighting projects, experience, and community involvement from Christian Evans.",
-    images: ["/images/landing/me.jpg"],
+    images: ["/opengraph-image.jpg"],
   },
   robots: {
     index: true,
