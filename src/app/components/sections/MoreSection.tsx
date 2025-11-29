@@ -29,11 +29,11 @@ const MoreSection = () => {
     ]
   return (
     <div className='container mx-auto px-5 xl:px-0 min-h-screen flex pt-25 pb-15 flex-col gap-5'>
-        <h1 className='text-5xl xl:text-8xl font-semibold pb-5'>A little more...</h1>
+        <h1 className='text-5xl xl:text-8xl font-semibold pb-5'>More About Me!</h1>
         <div className="lg:grid grid-cols-5 grid-rows-6 flex flex-col gap-5 h-full w-full">
             <div className="h-full w-full bg-black/35 rounded-4xl lg:col-span-2 lg:row-span-3 flex flex-col items-center justify-center p-5">
                 <h2 className='text-4xl font-semibold'>My people</h2>
-                <p>This is who I do everything for.</p>
+                <p>Who I do everything for.</p>
                 <div className="w-full">
                     <ImageCarousel images={fam}/>
                 </div>

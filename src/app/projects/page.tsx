@@ -39,7 +39,7 @@ const page = () => {
       </motion.h1>
 
       <motion.p
-        className="text-center px-6 sm:px-36 sm:text-xl text-sm sm:mb-8 mb-3"
+        className="text-center px-6 sm:px-36 sm:text-lg text-sm sm:mb-8 mb-3"
         variants={itemVariants}
       >
         I see every project as a chance to learn something new. Whether it&apos;s
@@ -51,7 +51,7 @@ const page = () => {
       {projectsArray.map((project, index) => (
         <div
           key={index}
-          className="sticky top-[2rem] sm:top-[8rem] mb-12"
+          className="sticky top-[2rem] sm:top-[8rem] mb-12 animate-fade-down"
         >
           <ProjectCard project={project} />
         </div>

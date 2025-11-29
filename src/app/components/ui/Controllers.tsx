@@ -296,7 +296,7 @@ const FightStickController = () => {
 const Controllers = () => {
   return (
     <div className="flex h-full w-full flex-col gap-3 p-4 text-white">
-      <h2 className='text-3xl font-semibold text-center'>I love fighting games</h2>
+      <h2 className='text-3xl font-semibold text-center'>I play fighting games</h2>
       <div className="flex sm:flex-row flex-col items-center justify-around gap-3">
         <GameCubeController />
         <FightStickController />
