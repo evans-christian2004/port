@@ -110,7 +110,7 @@ const TopNav = () => {
                   </Link>
                   <Link
                     className="bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-2"
-                    href="/CSResume.pdf"
+                    href="/resume.pdf"
                   >
                     <Image
                       src="/icons/resume-dark.svg"

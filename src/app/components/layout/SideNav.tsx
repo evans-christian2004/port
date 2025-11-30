@@ -16,7 +16,7 @@ const SideNav = ({ isOpen, onClose }: SideNavProps) => {
         <div className="flex gap-3 mb-2">
               <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-3' href="https://github.com/evans-christian2004"><Image className='' src="/icons/github-dark.svg" width={35} height={35} alt='github'/></Link>
               <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-3' href="https://www.linkedin.com/in/evanschristian/"><Image src="/icons/linkedin-dark.svg" width={35} height={35} alt='github'/></Link>
-              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-3' href="/CSResume.pdf"><Image src="/icons/resume-dark.svg" width={35} height={35} alt='github'/></Link>
+              <Link className='bg-primary-500 hover:bg-white transition-all ease-in-out duration-300 rounded-full p-3' href="/resume.pdf"><Image src="/icons/resume-dark.svg" width={35} height={35} alt='github'/></Link>
         </div>
         <nav className='p-4 flex gap-5 flex-col justify-between items-center'>
             <Link 
