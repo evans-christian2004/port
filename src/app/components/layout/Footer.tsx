@@ -14,7 +14,7 @@ const Footer = () => {
                   height={35}
                   alt='logo'
                 />
-                <p className='font-semibold text-2xl'>chritianevas.dev</p>
+                <p className='font-semibold text-2xl'>christianevans.dev</p>
               </Link>
             </div>
             <div className="relative md:right-10 top-1">
