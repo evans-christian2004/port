@@ -3,7 +3,7 @@ import React from 'react'
 import SkillsSection from '../components/sections/SkillsSection'
 
 export const metadata: Metadata = {
-  title: "Skills | Christian Evans",
+  title: "Skills",
   description:
     "Technical skills for Christian Evans including Next.js, TypeScript, Tailwind CSS, cloud tooling, and support technologies used in production work.",
   alternates: { canonical: "/skills" },

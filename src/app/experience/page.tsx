@@ -6,7 +6,7 @@ import ExperienceCard from "../components/ui/ExperienceCard";
 import type { Variants } from "motion";
 
 export const metadata: Metadata = {
-  title: "Experience | Christian Evans",
+  title: "Experience",
   description:
     "Career timeline for Christian Evans: IT technician at UCF, front-end engineering internships, and leadership across developer communities.",
   alternates: { canonical: "/experience" },

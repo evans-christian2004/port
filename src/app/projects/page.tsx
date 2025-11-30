@@ -7,7 +7,7 @@ import ProjectCard from "../components/ui/ProjectCard";
 import type { Variants } from "motion";
 
 export const metadata: Metadata = {
-  title: "Projects | Christian Evans",
+  title: "Projects",
   description:
     "Browse Christian Evans' software projects—from hackathon builds to production-ready web apps—covering Next.js, TypeScript, AI workflows, and UI engineering.",
   alternates: { canonical: "/projects" },
