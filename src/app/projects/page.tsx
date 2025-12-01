@@ -63,7 +63,7 @@ const page = () => {
         variants={itemVariants}
       >
         I see every project as a chance to learn something new. Whether it&apos;s
-        practicing with new libraries and framworks, collaborating in hackathons, or just building tools
+        practicing with new libraries and frameworks, collaborating in hackathons, or just building tools
         that make life easier. Here&apos;s a look at the projects that have helped me
         grow as a developer.
       </motion.p>
@@ -71,7 +71,7 @@ const page = () => {
       {projectsArray.map((project, index) => (
         <div
           key={index}
-          className="sticky top-[2rem] sm:top-[8rem] mb-12 animate-fade-down"
+          className="sm:sticky top-[2rem] sm:top-[8rem] mb-12 animate-fade-down"
         >
           <ProjectCard project={project} />
         </div>
