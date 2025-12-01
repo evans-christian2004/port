@@ -71,7 +71,7 @@ const page = () => {
       {projectsArray.map((project, index) => (
         <div
           key={index}
-          className="sm:sticky top-[2rem] sm:top-[8rem] mb-12 animate-fade-down"
+          className="sm:sticky top-[2rem] sm:top-[8rem] sm:mb-12 mb-4 animate-fade-down"
         >
           <ProjectCard project={project} />
         </div>
