@@ -51,7 +51,7 @@ const MoreSection = () => {
             </div>
             <div className="h-full w-full bg-black/35 rounded-4xl col-span-2 row-span-1 flex flex-col items-center justify-center p-5">
                 <h2 className='text-2xl font-bold text-center'>What I&apos;m working on:</h2>
-                <p className='text-center'>Prepping for the Amazon Web Services Certified Cloud Practitional Certification</p>
+                <p className='text-center'>Prepping for the Amazon Web Services Certified Cloud Practitioner Certification</p>
             </div>
             <div className="h-full w-full bg-black/35 rounded-4xl row-span-2 col-span-2">
                 <Controllers/>
