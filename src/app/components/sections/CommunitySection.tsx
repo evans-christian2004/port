@@ -39,17 +39,17 @@ const CommunitySection = () => {
             </div> 
             <div className="text-5xl xl:text-8xl md:mb-12 mt-10">
               <p className='text-sm sm:text-xl'>
-                I am driven by a deep passion for <strong>full stack development</strong>, specifically where technical <strong>web architecture</strong>  meets <strong>intuitive UI/UX design</strong>. 
-                While my professional background is rooted in <strong>IT</strong>, my enthusiasm expands to <strong>cloud services</strong> and the infrastructure that powers modern software. 
+                I am driven by a deep passion for <strong className="landing">full stack development</strong>, specifically where technical <strong className="landing">web architecture</strong>  meets <strong className="landing">intuitive UI/UX design</strong>. 
+                While my professional background is rooted in <strong className="landing">IT</strong>, my enthusiasm expands to <strong className="landing">cloud services</strong> and the infrastructure that powers modern software. 
                 I love the process of building web applications from the ground up, ensuring they are not only robust and scalable but also provide a seamless, 
                 engaging experience for the user.
               </p>
               <p className='text-sm sm:text-xl pt-6'>
                 One of my favorite parts of being a student at UCF is getting to compete alongside 
-                my <Link href="https://club.knighthacks.org/" className="text-primary-500 underline">Knight Hacks</Link> community. <strong>Hackathons</strong> have
+                my <Link href="https://club.knighthacks.org/" className="text-primary-500 underline">Knight Hacks</Link> community. <strong className="landing">Hackathons</strong> have
                 become a core part of my journey as a developer. There&apos;s something special about being surrounded by people who 
                 share the same drive to build, learn, and create under pressure. Each hackathon I&apos;ve attended has pushed me to grow not 
-                only as a <strong>programmer</strong>, but as a <strong>teammate</strong> and <strong>problem-solver</strong>. Whether we&apos;re celebrating a successful demo or laughing over 
+                only as a <strong className="landing">programmer</strong>, but as a <strong className="landing">teammate</strong> and <strong className="landing">problem-solver</strong>. Whether we&apos;re celebrating a successful demo or laughing over 
                 the last-minute bugs, the experiences always reminds me why I fell in love with tech.
               </p>
             </div>

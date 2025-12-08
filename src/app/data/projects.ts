@@ -47,7 +47,7 @@ export const projectsData = [
     description: "A financial planner that pulls a user's transaction history and displays it onto a Calendar, allowing them to use an AI assistant to gain insights and better manage the timing of their financial transactions.",
     bodyText: `
 <p>
-  A lot of financial budgeting apps monitor <strong>what</strong> you spend, but not <strong>when</strong> you spend it, so we built <strong>Alto</strong>: A smart financial planner that visualizes spending and income timing to help users avoid overdrafts. Instead of static charts, Alto turns Plaid-formatted transaction data into an interactive calendar that shows when bills, subscriptions, and paychecks actually hit—making financial timing clear and actionable.
+  A lot of financial budgeting apps monitor <strong>what</strong> you spend, but not <strong>when</strong> you spend it, so we built <strong>Alto: A smart financial planner that visualizes spending and income timing</strong> to help users avoid overdrafts. Instead of static charts, Alto turns Plaid-formatted transaction data into an interactive calendar that shows when bills, subscriptions, and paychecks actually hit—making financial timing clear and actionable.
 </p>
 
 <h2>Contributions</h2>
@@ -65,8 +65,8 @@ export const projectsData = [
 
 <h2>Technical Highlights</h2>
 <ul>
-  <li>Next.js + React frontend styled with Tailwind.</li>
-  <li>Multi-agent system built with Google ADK coordinating between Q&A and calendar tasks.</li>
+  <li><strong>Next.js + React</strong> frontend styled with Tailwind.</li>
+  <li>Multi-agent system built with <strong>Google ADK</strong> coordinating between Q&A and calendar tasks.</li>
   <li>Session persistence via local storage keyed by username.</li>
   <li>Calendar UI with move functionality to change payment dates and reflect timing shifts.</li>
 </ul>
@@ -96,7 +96,7 @@ export const projectsData = [
     description: "The ultimate learning assistant! TL;DR can take in multiple forms of input and format them into different mediums using the Gemini API for people who want their media in a different form.",
     bodyText: `
 <p>
-  We built <strong>TL;DR</strong> so one file in can turn into many formats out. Students and creators can upload a PDF or paste text and get back a summary, plain text, exportable PDF, and even optional audio without being locked into cloud tools.
+  We built <strong>TL;DR</strong> so <strong>one file in can turn into many formats out</strong>. Students and creators can upload a PDF or paste text and get back a summary, plain text, exportable PDF, and even optional audio without being locked into cloud tools.
 </p>
 
 <h2>Contributions</h2>
@@ -110,8 +110,8 @@ export const projectsData = [
 
 <h2>Technical Highlights</h2>
 <ul>
-  <li>Next.js + React front end styled with Tailwind CSS.</li>
-  <li>AI summarization via Google Gemini (and mock provider for dev mode).</li>
+  <li><strong>Next.js + React</strong> front end styled with <strong>Tailwind CSS</strong>.</li>
+  <li>AI summarization via <strong>Google Gemini</strong> (and mock provider for dev mode).</li>
   <li>Text extraction using <strong>pdf-parse</strong>.</li>
   <li>Pipeline architecture with modular stage interfaces enabling future outputs (TTS, image generation).</li>
 </ul>
@@ -145,7 +145,7 @@ export const projectsData = [
     description: "The University of Central Florida uses a foundation exam to determine which students remain in the Computer Science major. This tool allows users to practice for the exam by whiteboarding answers and getting auto grading using the Google Gemini API.",
     bodyText: `
 <p>
-  I helped build <strong>FE AI</strong>, a tool for the CS Foundation Exam where students can whiteboard answers and get AI-powered feedback. Instead of grading manually, we used Google Gemini to evaluate submissions and tell students how to get full credit.
+  I helped build <strong>FE AI</strong>, a <strong>tool for the CS Foundation Exam where students can whiteboard answers and get AI-powered feedback</strong>. Instead of grading manually, we used Google Gemini to evaluate submissions and tell students how to get full credit.
 </p>
 
 <h2>Contributions</h2>
@@ -190,7 +190,7 @@ export const projectsData = [
     description: "Using Sanity, a headless CMS platform that allows developers and content creators to manage content separately from the frontend. I wanted to try it out as a developer tool, make a simple project, and learn a lot about how CMS systems work!",
     bodyText: `
 <p>
-  I built a small project using <strong>Sanity</strong>, a headless CMS platform that lets developers and content creators manage structured content separately from the frontend. My goal was to see how CMS systems work and how they help you manage dynamic content in modern web apps.
+  I built a small project using <strong>Sanity</strong>, a <strong>headless CMS platform</strong> that lets developers and content creators manage structured content separately from the frontend. My goal was to see how CMS systems work and how they help you manage dynamic content in modern web apps.
 </p>
 <h2>Accomplishments</h2>
 <ul>
@@ -232,7 +232,7 @@ export const projectsData = [
     description: "Before learning TypeScript, I wanted to become more familiar with the concepts, so I made a TypeScript flashcard game with React before jumping into the JavaScript alternative.",
     bodyText: `
 <p>
-  I built a flash-card app using React to help me learn TypeScript. It lets users flip cards with questions and answers, randomly pick cards, and reinforce learning in a fun way.
+  I <strong>built a flash-card app using React</strong> to help me learn TypeScript. It lets users flip cards with questions and answers, randomly pick cards, and reinforce learning in a fun way.
 </p>
 
 <h2>Accomplishments</h2>
