@@ -52,7 +52,7 @@ export const projectsData = [
 
 <h2>Contributions</h2>
 <ul>
-  <li>Architected the full-stack integration between a <strong>Next.js + Tailwind</strong> front end and a multi-agent system powered by <strong>Google ADK</strong>.</li>
+  <li>Architected the full-stack integration between a <strong>Next.js + Tailwind</strong> frontend and a multi-agent system powered by <strong>Google ADK</strong>.</li>
   <li>Designed and implemented session management using local storage for MVP testing.</li>
   <li>Built the calendar interface that dynamically updates when users move payments or charges, storing changes locally for continuity.</li>
   <li>Developed an <strong>AI workflow</strong> where a root coordinator routes tasks between two agents: 
@@ -73,7 +73,7 @@ export const projectsData = [
 
 <h2>Challenges and Wins</h2>
 <p>
-  The biggest challenge was getting the ADK agents to reliably integrate with our front end and manage context across sessions. I'm proud this was the first time I got a project running with Google ADK after earlier attempts didn't work out.
+  The biggest challenge was getting the ADK agents to reliably integrate with our frontend and manage context across sessions. I'm proud this was the first time I got a project running with Google ADK after earlier attempts didn't work out.
 </p>
 
 <h2>What I Learned</h2>
@@ -110,7 +110,7 @@ export const projectsData = [
 
 <h2>Technical Highlights</h2>
 <ul>
-  <li><strong>Next.js + React</strong> front end styled with <strong>Tailwind CSS</strong>.</li>
+  <li><strong>Next.js + React</strong> frontend styled with <strong>Tailwind CSS</strong>.</li>
   <li>AI summarization via <strong>Google Gemini</strong> (and mock provider for dev mode).</li>
   <li>Text extraction using <strong>pdf-parse</strong>.</li>
   <li>Pipeline architecture with modular stage interfaces enabling future outputs (TTS, image generation).</li>
@@ -150,7 +150,7 @@ export const projectsData = [
 
 <h2>Contributions</h2>
 <ul>
-  <li>Built the front-end interface with <strong>Vite</strong>, <strong>React</strong>, <strong>HTML</strong>, and <strong>CSS</strong> using a familiar split-screen layout for questions and the whiteboard.</li>
+  <li>Built the frontend interface with <strong>Vite</strong>, <strong>React</strong>, <strong>HTML</strong>, and <strong>CSS</strong> using a familiar split-screen layout for questions and the whiteboard.</li>
   <li>Integrated <strong>TLDraw</strong> as the answering canvas so users could draw responses like writing on paper.</li>
   <li>Engineered the submission pipeline: captured screenshots, encoded them in Base64, sent to <strong>Google Gemini API</strong>, and displayed structured feedback.</li>
   <li>Collaborated on UI/UX design in <strong>Figma</strong> and implemented responsive, exam-style views including landing page, header, footer.</li>
