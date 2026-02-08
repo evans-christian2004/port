@@ -59,7 +59,9 @@ const ProjectDisplay = ({ project, open, onClose }: ProjectDisplayProps) => {
               background: project.primaryColor ?? "#101010",
               color: project.secondaryColor ?? "#F5F5F5",
             }}
-            className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-[2.5rem] border border-current/20 p-6 sm:p-10 shadow-2xl"
+            data-lenis-prevent
+            data-lenis-prevent-wheel
+            className="relative max-h-[90vh] w-full max-w-5xl overflow-y-auto rounded-[2.5rem] border border-current/20 p-6 sm:p-10 shadow-2xl no-scrollbar"
             role="dialog"
             aria-modal="true"
             aria-labelledby={modalId}

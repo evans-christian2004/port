@@ -5,6 +5,7 @@ import TopNav from "./components/layout/TopNav";
 import Footer from "./components/layout/Footer";
 import Cursor from "./components/ui/Cursor";
 import Preloader from "./components/ui/Preloader";
+import Wrapper from "./components/ux/Wrapper";
 
 const lexend = Lexend({
   variable: "--font-lexend",
@@ -78,14 +79,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
+
     <html lang="en">
-      <body className={`${lexend.variable} antialiased`}>
-        <Preloader />
-        <Cursor />
-        <TopNav />
-        {children}
-        <Footer />
+      <body className={`${lexend.variable} antialiased no-scrollbar`}>
+        <Wrapper>
+          <Preloader />
+          <Cursor />
+          <TopNav />
+          {children}
+          <Footer />
+        </Wrapper>
       </body>
     </html>
   );

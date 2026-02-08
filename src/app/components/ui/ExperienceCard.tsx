@@ -40,7 +40,7 @@ const ExperienceCard = ({ experience }: ExperienceCardProps) => {
       <motion.button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="mt-4 inline-flex rounded-full w-full justify-center px-2 py-1 items-center gap-2 text-sm font-semibold text-primary-200 transition hover:text-white focus:outline-none"
+        className="mt-4 inline-flex rounded-full w-full justify-center px-2 py-1 items-center gap-2 text-sm font-semibold text-primary-200 transition hover:cursor-pointer focus:outline-none"
         style={{background:experience.primaryColor, color:experience.secondaryColor}}
         aria-expanded={open}
       >
