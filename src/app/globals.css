@@ -29,6 +29,10 @@
 }
 }
 
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
 
 
 @keyframes spin-slow {

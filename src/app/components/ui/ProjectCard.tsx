@@ -17,7 +17,7 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
         color: project.secondaryColor,
         outlineColor: project.secondaryColor,
       }}
-      className="flex flex-col lg:flex-row gap-10 items-center hover:outline-2 outline-amber-700 p-4 sm:p-10 m-2 rounded-[3rem] sm:rounded-[4rem] shadow-blue-50/50 hover:shadow-2xl transition-all ease-in-out"
+      className="flex flex-col lg:flex-row gap-10 items-center hover:outline-1 outline-amber-700 p-4 sm:p-10 m-2 rounded-[3rem] sm:rounded-[4rem] shadow-blue-50/50 hover:shadow-2xl transition-all ease-in-out"
     >
       {/* Image wrapper */}
       <div className="relative w-full sm:w-[36rem] h-[12rem] sm:h-[24rem] lg:h-[30rem] rounded-4xl sm:rounded-4xl overflow-hidden shadow-2xl flex-shrink-0">

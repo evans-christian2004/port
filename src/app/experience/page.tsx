@@ -27,11 +27,11 @@ export const metadata: Metadata = {
 export default function ExperienceSection() {
   const container: Variants = {
     hidden: {},
-    visible: { transition: { staggerChildren: 0.30 } },
+    visible: { transition: { staggerChildren: 0.24 } },
   };
   const seg: Variants = {
     hidden: { scaleY: 0 },
-    visible: { scaleY: 1, transition: { duration: 0.6, ease: "easeInOut" } },
+    visible: { scaleY: 1, transition: { duration: 0.4, ease: "easeInOut" } },
   };
   const item: Variants = {
     hidden: { opacity: 0, y: 48 },
