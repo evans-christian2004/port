@@ -95,7 +95,7 @@ const SkillsSection = () => {
                     {category.skills.map((skill) => (
                         <motion.li key={skill.name} 
                             className='xs:w-35 xs:min-h-44 w-30 p-4 rounded-4xl bg-secondary-500 
-                            hover:shadow-lg hover:-translate-y-2 shadow-black transition-all ease-in-out'
+                            hover:shadow-lg hover:-translate-y-2 shadow-black transition-all ease-in-out will-change-transform'
                             variants={listItemVariants}
                         >
                             <Link className='flex justify-between flex-col' href={skill.url}>
