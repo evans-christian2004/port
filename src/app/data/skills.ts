@@ -110,12 +110,12 @@ export const skills: SkillCategory[] = [
             },
             {
                 name: "Amazon Web Services",
-                iconSrc: "icons/skill-icons/aws.svg",
+                iconSrc: "/icons/skill-icons/aws.svg",
                 url: "https://docs.aws.amazon.com/"
             },
             {
                 name: "Vercel",
-                iconSrc: "icons/skill-icons/vercel.svg",
+                iconSrc: "/icons/skill-icons/vercel.svg",
                 url: "https://www.vercel.com/"
             },
             {

@@ -83,7 +83,7 @@ export default function RootLayout({
   return (
 
     <html lang="en">
-      <body className={`${lexend.variable} antialiased no-scrollbar`}>
+      <body suppressHydrationWarning className={`${lexend.variable} antialiased no-scrollbar`}>
         <Wrapper>
           <Preloader />
           <Cursor />

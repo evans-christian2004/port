@@ -59,7 +59,8 @@ const SkillsSection = () => {
     <motion.div
           className="container mx-auto mb-12"
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.1 }}
           variants={containVariants}
         >
           <motion.h1
@@ -80,22 +81,21 @@ const SkillsSection = () => {
             <motion.div
               key={category.category}
               variants={categoryVariants}
-              initial="hidden"
-              animate="visible"
             >
                 <motion.h2 
-                    variants={categoryVariants}
+                    variants={itVariants}
                     className='sm:mt-10 sm:mb-8 mt-5 mb-1 text-3xl sm:text-5xl text-center'>
                         {category.category}:
                 </motion.h2>
                 <motion.ul 
-                    className="flex justify-center flex-wrap gap-5"
+                    className="flex justify-center flex-wrap sm:gap-5 gap-3"
                     variants={listVariants}
                 >
                     {category.skills.map((skill) => (
-                        <motion.li key={skill.name} 
+                        <motion.li key={skill.name}
+                            whileHover={{ y: -8 }}
                             className='xs:w-35 xs:min-h-44 w-30 p-4 rounded-4xl bg-secondary-500 
-                            hover:shadow-lg hover:-translate-y-2 shadow-black transition-all ease-in-out will-change-transform'
+                            hover:shadow-lg shadow-black transition-shadow duration-200 ease-in-out will-change-transform transform-gpu'
                             variants={listItemVariants}
                         >
                             <Link className='flex justify-between flex-col' href={skill.url}>
