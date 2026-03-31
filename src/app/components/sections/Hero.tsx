@@ -59,10 +59,12 @@ function getRandomRotation(){
 function animateLettersOnScroll(ref: React.RefObject<HTMLDivElement>){
     const nodes = ref.current?.querySelectorAll<HTMLElement>('.letter') || [];
     nodes.forEach(letter => {
-      console.log()
         const speed = parseFloat(letter.dataset.speed || '1');
         gsap.to(letter, {
-            y: (0.72 - speed) * ScrollTrigger.maxScroll(window),
+            y: () => {
+                const baseY = window.matchMedia('(max-width: 1024px)').matches ? 0.84 : 0.72;
+                return (baseY - speed) * ScrollTrigger.maxScroll(window);
+            },
             rotation: getRandomRotation(),
             ease: 'power2.out',
             duration: 0.8,

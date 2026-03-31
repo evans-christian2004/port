@@ -51,7 +51,7 @@ const TopNav = () => {
           paddingBottom: scrolled ? 12 : 12, 
         }}
         transition={{ duration: 0.15, ease: "easeOut" }}
-        className="container mx-auto flex items-center justify-between sticky top-0 z-20 px-4"
+        className="container mx-auto flex items-center justify-between sticky top-0 z-50 px-4"
       >
         <Link href="/">
           <Image

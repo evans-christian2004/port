@@ -157,7 +157,7 @@ const Joystick: React.FC<JoystickProps> = ({
           background: accent,
         }}
       />
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
+      <div className="relative flex h-full w-full items-center justify-center">
         <div
           className="rounded-full border border-white/30 transition-transform duration-75"
           style={{
